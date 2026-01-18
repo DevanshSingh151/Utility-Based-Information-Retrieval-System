@@ -1,0 +1,198 @@
+/* Results Preview Section Styles */
+.results-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.results-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Results Header */
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.results-count {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.results-note {
+  font-size: 0.85rem;
+  color: #95a5a6;
+  font-style: italic;
+}
+
+/* Results Grid - Card Layout */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* Result Card */
+.result-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.15);
+}
+
+/* Card Header with Score */
+.card-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.score-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  min-width: 80px;
+}
+
+.score-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.score-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* Document Name */
+.document-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Document Snippet */
+.document-snippet {
+  font-size: 0.95rem;
+  color: #5a6c7d;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Card Footer */
+.card-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #e9ecef;
+}
+
+.rank-badge {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+/* Empty State */
+.empty-results {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.empty-text {
+  font-size: 1.1rem;
+  color: #95a5a6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .result-card {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .result-card {
+    padding: 18px;
+  }
+
+  .document-name {
+    font-size: 1rem;
+  }
+
+  .document-snippet {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 3;
+  }
+
+  .score-badge {
+    min-width: 70px;
+    padding: 6px 12px;
+  }
+
+  .score-value {
+    font-size: 1.1rem;
+  }
+}
+
+/* Alternative score badge colors for variety (optional) */
+.result-card:nth-child(2) .score-badge {
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+}
+
+.result-card:nth-child(4) .score-badge {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+}
