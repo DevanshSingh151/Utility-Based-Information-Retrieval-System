@@ -1,0 +1,12 @@
+Flask
+sentence-transformers
+rank-bm25
+scikit-learn
+nltk
+spacy
+numpy
+pandas
+pymongo
+werkzeug
+pytest
+tf-keras

@@ -1,0 +1,95 @@
+import numpy as np
+from datetime import datetime
+
+class UtilityAgent:
+    def __init__(self):
+        # 8 Dynamic Features
+        # [cross_encoder_score, bert_similarity, bm25_score, diversity_mmr, recency_factor, source_trust, length_match, readability_match]
+        self.weights = np.array([0.25, 0.20, 0.15, 0.12, 0.10, 0.08, 0.07, 0.03])
+        self.learning_rate = 0.05
+        self.queries_learned = 0
+        self.optimal_weights_reached = False
+        
+    def bayesian_uniform_prior(self):
+        return np.ones(8) / 8.0
+        
+    def _calculate_recency(self, date_str):
+        try:
+            doc_date = datetime.strptime(date_str, "%Y-%m-%d")
+            days_old = (datetime.now() - doc_date).days
+            return max(0, 1.0 / (days_old + 1))
+        except:
+            return 0.0
+            
+    def _calculate_source_trust(self, source):
+        trust_map = {
+            "nytimes": 0.95,
+            "academic": 0.90,
+            "tech_report": 0.85,
+            "news": 0.70,
+            "blog": 0.40
+        }
+        return trust_map.get(source, 0.5)
+        
+    def _calculate_length_match(self, query_len, doc_len):
+        diff = abs(query_len - doc_len)
+        return max(0, 1.0 - (diff / 5000.0))
+        
+    def _calculate_readability_match(self, doc_score):
+        diff = abs(doc_score - 60.0)
+        return max(0, 1.0 - (diff / 100.0))
+
+    def extract_features(self, query, doc_obj, bert_sim, bm25_sim, cross_score, diversity_mmr=1.0):
+        query_len = len(query.split())
+        doc_len = len(doc_obj['content'].split())
+        
+        features = np.array([
+            cross_score,
+            bert_sim,
+            bm25_sim,
+            diversity_mmr,
+            self._calculate_recency(doc_obj['date']),
+            self._calculate_source_trust(doc_obj['source']),
+            self._calculate_length_match(query_len, doc_len),
+            self._calculate_readability_match(doc_obj['readability_score'])
+        ])
+        return np.clip(features, 0.0, 1.0)
+        
+    def compute_utility(self, features):
+        return np.dot(self.weights, features)
+        
+    def get_ranked_results(self, query, hybrid_results):
+        ranked = []
+        for res in hybrid_results:
+            doc = res['doc']
+            feats = self.extract_features(
+                query, 
+                doc, 
+                res.get('bert_sim', 0), 
+                res.get('bm25_sim', 0), 
+                res.get('cross_score', res.get('score', 0))
+            )
+            utility = self.compute_utility(feats)
+            ranked.append({
+                "doc": doc,
+                "features": [round(f, 3) for f in feats.tolist()],
+                "utility": round(float(utility), 3)
+            })
+            
+        ranked.sort(key=lambda x: x['utility'], reverse=True)
+        return ranked[:10]
+        
+    def learn_from_feedback(self, features, clicked):
+        signal = 1 if clicked else -1
+        gradient = np.array(features) * signal
+        
+        self.weights = self.weights + self.learning_rate * gradient
+        self.weights = np.clip(self.weights, 0.01, 1.0)
+        self.weights = self.weights / np.sum(self.weights)
+        
+        if clicked:
+            self.queries_learned += 1
+            if self.queries_learned >= 10:
+                self.optimal_weights_reached = True
+                
+        return [round(w, 3) for w in self.weights.tolist()]
