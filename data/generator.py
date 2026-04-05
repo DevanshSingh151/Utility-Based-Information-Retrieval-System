@@ -2,7 +2,7 @@ import json
 import os
 import random
 from datetime import datetime, timedelta
-import config
+from app import config
 import math
 
 def generate_sample_data():
@@ -45,10 +45,10 @@ def generate_sample_data():
         json.dump(documents, f, indent=4)
         
     print("Building Search Indexes (Offline Stage)...")
-    from app.bm25_engine import BM25Engine
+    from app.retriever.bm25_retriever import BM25Engine
     bm25 = BM25Engine()
     bm25.fit(documents)
     
-    from app.bert_engine import BERTSearchEngine
+    from app.retriever.bert_retriever import BERTSearchEngine
     bert = BERTSearchEngine()
     bert.fit(documents)

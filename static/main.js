@@ -100,7 +100,7 @@ function renderResults(data) {
                 </div>
             </div>
             
-            <p class="mb-2 text-light opacity-75 lh-lg">${doc.content.substring(0, 350)}...</p>
+            <p class="mb-2 text-light opacity-75 lh-lg">${res.snippet || doc.content.substring(0, 350) + "..."}</p>
             <button class="btn btn-sm btn-outline-info mb-4" onclick='openDocumentModal(${JSON.stringify(doc).replace(/'/g, "&#39;")})'>
                 <i class="fa-solid fa-book-open me-2"></i>Read Full Report
             </button>
@@ -120,10 +120,10 @@ function renderResults(data) {
             <div class="d-flex justify-content-between align-items-center bg-dark p-3 rounded-3 border border-secondary">
                 <span class="text-muted small fw-bold text-uppercase letter-spacing-1"><i class="fa-solid fa-chalkboard-user me-2"></i>Provide AI Feedback:</span>
                 <div class="d-flex gap-2">
-                    <button class="btn btn-sm btn-outline-success feedback-btn" onclick='sendFeedback(${JSON.stringify(res.features)}, true, this)'>
+                    <button class="btn btn-sm btn-outline-success feedback-btn" onclick='sendFeedback("${doc.id}", ${JSON.stringify(res.features)}, true, this)'>
                         <i class="fa-solid fa-thumbs-up me-1"></i> Relevant (+)
                     </button>
-                    <button class="btn btn-sm btn-outline-danger feedback-btn" onclick='sendFeedback(${JSON.stringify(res.features)}, false, this)'>
+                    <button class="btn btn-sm btn-outline-danger feedback-btn" onclick='sendFeedback("${doc.id}", ${JSON.stringify(res.features)}, false, this)'>
                         <i class="fa-solid fa-thumbs-down me-1"></i> Irrelevant (-)
                     </button>
                 </div>
@@ -134,9 +134,10 @@ function renderResults(data) {
     });
 }
 
-async function sendFeedback(features, clicked, btn) {
+async function sendFeedback(doc_id, features, clicked, btn) {
     const card = btn.closest('.result-card');
     const btns = card.querySelectorAll('.btn');
+    const query = document.getElementById('searchInput').value;
     btns.forEach(b => b.disabled = true);
 
     // Visual feedback
@@ -146,7 +147,7 @@ async function sendFeedback(features, clicked, btn) {
         const res = await fetch('/feedback', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ features, clicked })
+            body: JSON.stringify({ query, doc_id, features, clicked })
         });
         const data = await res.json();
 

@@ -1,14 +1,20 @@
 import numpy as np
 from datetime import datetime
 
+from app.feedback.persistence import FeedbackPersistence
+
 class UtilityAgent:
     def __init__(self):
         # 8 Dynamic Features
         # [cross_encoder_score, bert_similarity, bm25_score, diversity_mmr, recency_factor, source_trust, length_match, readability_match]
-        self.weights = np.array([0.25, 0.20, 0.15, 0.12, 0.10, 0.08, 0.07, 0.03])
+        default_weights = [0.25, 0.20, 0.15, 0.12, 0.10, 0.08, 0.07, 0.03]
+        self.persistence = FeedbackPersistence()
+        
+        loaded_weights, queries = self.persistence.load_weights(default_weights)
+        self.weights = loaded_weights
         self.learning_rate = 0.05
-        self.queries_learned = 0
-        self.optimal_weights_reached = False
+        self.queries_learned = queries
+        self.optimal_weights_reached = queries >= 10
         
     def bayesian_uniform_prior(self):
         return np.ones(8) / 8.0
@@ -79,7 +85,7 @@ class UtilityAgent:
         ranked.sort(key=lambda x: x['utility'], reverse=True)
         return ranked[:10]
         
-    def learn_from_feedback(self, features, clicked):
+    def learn_from_feedback(self, query, doc_id, features, clicked):
         signal = 1 if clicked else -1
         gradient = np.array(features) * signal
         
@@ -87,9 +93,13 @@ class UtilityAgent:
         self.weights = np.clip(self.weights, 0.01, 1.0)
         self.weights = self.weights / np.sum(self.weights)
         
+        self.persistence.log_interaction(query, doc_id, clicked, features)
+        
         if clicked:
             self.queries_learned += 1
             if self.queries_learned >= 10:
                 self.optimal_weights_reached = True
+                
+        self.persistence.save_weights(self.weights, self.queries_learned)
                 
         return [round(w, 3) for w in self.weights.tolist()]

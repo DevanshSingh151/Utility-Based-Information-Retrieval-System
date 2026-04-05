@@ -1,5 +1,5 @@
 import os
-import config
+from app import config
 
 def generate_report():
     content = """# Adaptive Multi-Objective Utility Agent for Hybrid Semantic Search

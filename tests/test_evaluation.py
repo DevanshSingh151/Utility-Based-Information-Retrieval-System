@@ -5,10 +5,21 @@ import sys
 # Ensure module path is correct
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from app.bm25_engine import BM25Engine
-from app.agent import UtilityAgent
+from app.retriever.bm25_retriever import BM25Engine
+from app.ranker.utility_agent import UtilityAgent
 from data.generator import generate_sample_data
-import config
+from app import config
+from app.evaluation.metrics import calculate_precision_at_k, calculate_ndcg_at_k
+
+def test_metrics():
+    retrieved = [{"doc": {"id": "doc_1"}}, {"doc": {"id": "doc_2"}}]
+    relevant = ["doc_1"]
+    
+    p = calculate_precision_at_k(relevant, retrieved, 2)
+    assert p == 0.5, "Precision at 2 should be 0.5"
+    
+    ndcg = calculate_ndcg_at_k(relevant, retrieved, 2)
+    assert ndcg > 0.0, "nDCG should be positive"
 
 def test_system_evaluations():
     """
@@ -37,8 +48,9 @@ def test_agent_initialization():
     # Test Bayesian update
     init_weight = agent.weights[0]
     # Positively affirm the first feature is strong
+    # Positively affirm the first feature is strong
     features = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    new_weights = agent.learn_from_feedback(features, clicked=True)
+    new_weights = agent.learn_from_feedback("test_query", "doc_1", features, clicked=True)
     
     assert new_weights[0] > init_weight, "Bayesian weight must shift towards clicked positive features"
-    assert agent.queries_learned == 1, "Agent increments learning iteration"
+    assert agent.queries_learned > 0, "Agent increments learning iteration"

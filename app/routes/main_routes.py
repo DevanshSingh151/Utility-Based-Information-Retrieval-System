@@ -1,7 +1,8 @@
 from flask import Blueprint, render_template, request, jsonify
-from app.bm25_engine import BM25Engine
-from app.bert_engine import BERTSearchEngine, rrf_fusion
-from app.agent import UtilityAgent
+from app.retriever.bm25_retriever import BM25Engine
+from app.retriever.bert_retriever import BERTSearchEngine, rrf_fusion
+from app.ranker.utility_agent import UtilityAgent
+from app.utils.snippet import generate_snippet
 import time
 
 bp = Blueprint('main', __name__)
@@ -60,8 +61,11 @@ def search():
                 break
     t2 = time.time()
     
-    # Stage 3: Utility Agent
     final_results = agent.get_ranked_results(query, cross_results)
+    
+    # Add snippets
+    for res in final_results:
+        res['snippet'] = generate_snippet(query, res['doc']['content'])
     t3 = time.time()
     
     return jsonify({
@@ -85,7 +89,9 @@ def feedback():
     features = data.get('features')
     clicked = data.get('clicked')
     
-    new_weights = agent.learn_from_feedback(features, clicked)
+    query_text = data.get('query', '')
+    doc_id = data.get('doc_id', '')
+    new_weights = agent.learn_from_feedback(query_text, doc_id, features, clicked)
     
     return jsonify({
         "status": "Learning successful",

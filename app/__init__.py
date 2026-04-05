@@ -4,7 +4,7 @@ def create_app():
     app = Flask(__name__, template_folder='../templates', static_folder='../static')
     
     with app.app_context():
-        from app import routes
-        app.register_blueprint(routes.bp)
+        from app.routes import main_routes
+        app.register_blueprint(main_routes.bp)
         
     return app

@@ -2,8 +2,8 @@ import os
 import pickle
 import math
 from rank_bm25 import BM25Okapi
-import config
-from app.preprocessor import Preprocessor
+from app import config
+from app.utils.preprocessor import Preprocessor
 
 class BM25Engine:
     def __init__(self):
