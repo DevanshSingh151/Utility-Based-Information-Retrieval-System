@@ -1,0 +1,542 @@
+[
+    {
+        "id": "arxiv_70259",
+        "title": "Space Cybersecurity Norms",
+        "content": "This paper addresses: Evolution of the space systems environment, including space system proliferation and space systems as critical infrastructure Cyber threats to, and vulnerabilities of, space systems Alternative approaches to meeting these threats, and the significance of norms Approaches to the development and reinforcement of norms for the cybersecurity of space systems.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2306.07441v1",
+        "date": "2023-06-12",
+        "readability_score": 49.47089562120822
+    },
+    {
+        "id": "arxiv_879013",
+        "title": "Coherence-driven inference for cybersecurity",
+        "content": "Large language models (LLMs) can compile weighted graphs on natural language data to enable automatic coherence-driven inference (CDI) relevant to red and blue team operations in cybersecurity. This represents an early application of automatic CDI that holds near- to medium-term promise for decision-making in cybersecurity and eventually also for autonomous blue team operations.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2509.18520v1",
+        "date": "2025-09-23",
+        "readability_score": 42.72480625469006
+    },
+    {
+        "id": "arxiv_285032",
+        "title": "Synergistic Development of Cybersecurity and Functional Safety for Smart Electric Vehicles",
+        "content": "The introduction of Smart Electric Vehicles (SEVs) represents an increasingly disruption on automotive area, once integrates advanced computer and communication technologies to highly electrical cars, which come with high performances, environment friendly and user friendly characteristics . But the increasing complexity of SEVs prompted by greater dependence on interconnected systems, autonomous capabilities and electrification, presents new challenges in cybersecurity as well as functional safety. The safety and reliability of such vehicles is paramount, as unsafe or unreliable operation in either case represents an unacceptable risk in terms of the performance of the vehicle and safety of the passenger. This paper investigates the integrated development of cybersecurity and functional safety for SEVs, emphasizing the requirement for the parallel development of these domains as components that are not treated separately. In SEVs, cybersecurity is quite crucial in order to prevent the threats of hacking, data breaches and unauthorized access to vehicle systems. Functional safety ensures that important vehicle functions (braking, steering, battery control, etc.) keep working even if some part fails. This convergence of functional safety issues with cybersecurity issues is becoming more crucial, since a security incident can result in a failure of catastrophic consequences for a functional safety system and, conversely. This paper reports the current state of cybersecurity and functional safety standards for SEVs, highlighting challenges that include the weaknesses of communication networks, the potential security threats of over-the-air updates, and the demand for real-time responsive systems for failure.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2511.07713v1",
+        "date": "2025-11-11",
+        "readability_score": 59.122939395112795
+    },
+    {
+        "id": "arxiv_269543",
+        "title": "Are Enterprises Ready for Quantum-Safe Cybersecurity?",
+        "content": "Quantum computing threatens to undermine classical cryptography by breaking widely deployed encryption and signature schemes. This paper examines enterprise readiness for quantum-safe cybersecurity through three perspectives: (i) the technologist view, assessing the maturity of post-quantum cryptography (PQC) and quantum key distribution (QKD); (ii) the enterprise (CISO/CIO) view, analyzing organizational awareness, risk management, and operational barriers; and (iii) the threat actor view, evaluating the evolving quantum threat and the urgency of migration. Using recent standards (e.g., NIST's 2024 PQC algorithms), industry surveys, and threat intelligence, we synthesize findings via a SWOT analysis to map strengths, weaknesses, opportunities, and threats. Results indicate uneven and generally insufficient preparedness: while PQC standards and niche QKD deployments signal technical progress, fewer than 5\\% of enterprises have formal quantum-transition plans, and many underestimate \"harvest now, decrypt later\" risks. Financial, telecom, and government sectors have begun migration, but most industries remain exploratory or stalled by costs, complexity, and skills gaps. Expert consensus places cryptanalytically relevant quantum computers in the 2030s, yet delayed preparation could leave today's data vulnerable for decades. We recommend immediate steps: establishing crypto-agility, creating quantum transition roadmaps, prioritizing PQC deployment in high-value systems, and upskilling cybersecurity teams. A coordinated, proactive approach is essential to secure current and future digital assets in the quantum era.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2509.01731v1",
+        "date": "2025-09-01",
+        "readability_score": 76.07019602273289
+    },
+    {
+        "id": "arxiv_772178",
+        "title": "A Review of Quantum Cybersecurity: Threats, Risks and Opportunities",
+        "content": "The promise of quantum computing is not speeding up conventional computing rather delivering an exponential advantage for certain classes of problems, with profound implications for cybersecurity for instance. With the advent and development of quantum computers, cyberspace security can surely become the most critical problem for the Internet in near future. On contrary, prosaic quantum technology can be promising to transform cybersecurity. This research aims to synthesize basic and fundamental studies concerning quantum cybersecurity that can be emerged both as a threat and solution to critical cybersecurity issues based on a systematic study. We provide a comprehensive, illustrative description of the current state-of-the-art quantum computing and cybersecurity and present the proposed approaches to date. Findings in quantum computing cybersecurity suggest that quantum computing can be adopted for the betterment of cybersecurity threats while it poses the most unexpected threats to cybersecurity. The focus and depth of this systematic survey not only provide quantum and cybersecurity practitioners and researchers with a consolidated body of knowledge about current trends in this area but also underpins a starting point for further research in this field.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2207.03534v1",
+        "date": "2022-07-07",
+        "readability_score": 73.86849443942509
+    },
+    {
+        "id": "arxiv_472492",
+        "title": "Applying Public Health Systematic Approaches to Cybersecurity: The Economics of Collective Defense",
+        "content": "The U.S. public health system increased life expectancy by more than 30 years since 1900 through systematic data collection, evidence-based intervention, and coordinated response. This paper examines whether cybersecurity can benefit from similar organizational principles. We find that both domains exhibit public good characteristics: security improvements create positive externalities that individual actors cannot fully capture, leading to systematic market failure and underinvestment. Current cybersecurity lacks fundamental infrastructure including standardized population definitions, reliable outcome measurements, understanding of transmission mechanisms, and coordinated intervention testing. Drawing on public health's transformation from fragmented local responses to coordinated evidence-based discipline, we propose a national Cyber Public Health System for systematic data collection, standardized measurement, and coordinated response. We argue government coordination is economically necessary rather than merely beneficial, and outline specific federal roles in establishing standards, funding research, coordinating response, and addressing information asymmetries that markets cannot resolve.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2602.13869v1",
+        "date": "2026-02-14",
+        "readability_score": 68.24290833308575
+    },
+    {
+        "id": "arxiv_12910",
+        "title": "Towards Autonomous Cybersecurity: An Intelligent AutoML Framework for Autonomous Intrusion Detection",
+        "content": "The rapid evolution of mobile networks from 5G to 6G has necessitated the development of autonomous network management systems, such as Zero-Touch Networks (ZTNs). However, the increased complexity and automation of these networks have also escalated cybersecurity risks. Existing Intrusion Detection Systems (IDSs) leveraging traditional Machine Learning (ML) techniques have shown effectiveness in mitigating these risks, but they often require extensive manual effort and expert knowledge. To address these challenges, this paper proposes an Automated Machine Learning (AutoML)-based autonomous IDS framework towards achieving autonomous cybersecurity for next-generation networks. To achieve autonomous intrusion detection, the proposed AutoML framework automates all critical procedures of the data analytics pipeline, including data pre-processing, feature engineering, model selection, hyperparameter tuning, and model ensemble. Specifically, it utilizes a Tabular Variational Auto-Encoder (TVAE) method for automated data balancing, tree-based ML models for automated feature selection and base model learning, Bayesian Optimization (BO) for hyperparameter optimization, and a novel Optimized Confidence-based Stacking Ensemble (OCSE) method for automated model ensemble. The proposed AutoML-based IDS was evaluated on two public benchmark network security datasets, CICIDS2017 and 5G-NIDD, and demonstrated improved performance compared to state-of-the-art cybersecurity methods. This research marks a significant step towards fully autonomous cybersecurity in next-generation networks, potentially revolutionizing network security applications.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2409.03141v1",
+        "date": "2024-09-05",
+        "readability_score": 40.84788028062377
+    },
+    {
+        "id": "arxiv_553369",
+        "title": "Autonomous Low Power IoT System Architecture for Cybersecurity Monitoring",
+        "content": "Network security morning (NSM) is essential for any cybersecurity system, where the average cost of a cyber attack is 1.1 million. No matter how secure a system, it will eventually fail without proper and continuous monitoring. No wonder that the cybersecurity market is expected to grow up to $170.4 billion in 2022. However, the majority of legacy industries do not invest in NSM implementation until it is too late due to the initial and operation costs and static unutilized resources. Thus, this paper proposes a novel dynamic Internet of things (IoT) architecture for an industrial NSM that features a low installation and operation cost, low power consumption, intelligent organization behavior, and environmentally friendly operation. As a case study, the system is implemented in a mid-range oil a gas manufacturing facility in the southern states with more than 300 machines and servers over three remote locations and a production plant that features a challenging atmosphere condition. The proposed system successfully shows a significant saving (>65%) in power consumption, acquires one-tenth of the installation cost, develops an intelligent operation expert system tool as well as saves the environment from more than 500mg of CO2 pollution per hour, promoting green IoT systems.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2106.00834v4",
+        "date": "2021-06-01",
+        "readability_score": 50.12548150425879
+    },
+    {
+        "id": "arxiv_478685",
+        "title": "Cybersecurity Guidance for Smart Homes: A Cross-National Review of Government Sources",
+        "content": "Smart homes are increasingly targeted by cyberattacks, yet residents often lack guidance when incidents occur. Since affected residents are likely to seek help from trustworthy sources, this paper asks: What actionable cybersecurity guidance do governments provide to smart home users whose systems have been compromised? To answer this question, we conduct an exploratory, user-centered review of governmental cybersecurity guidance for smart homes across eleven countries to identify and characterize the types of guidance governments provide and to systematize their content. Using a standardized search and screening process, we derive three emergent clusters: incident reporting, general security recommendations, and incident response. Our findings show that governments provide abundant general security advice and accessible reporting channels, but structured incident response guidance tailored to smart homes is rare. Only two sources offer step-by-step recovery guidance for non-expert users, highlighting a gap between preventive advice and post-incident support.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2603.21703v1",
+        "date": "2026-03-23",
+        "readability_score": 61.28127823279367
+    },
+    {
+        "id": "arxiv_330703",
+        "title": "Classifying SMEs for Approaching Cybersecurity Competence and Awareness",
+        "content": "Cybersecurity is increasingly a concern for small and medium-sized enterprises (SMEs), and there exist many awareness training programs and tools for them. The literature mainly studies SMEs as a unitary type of company and provides one-size-fits-all recommendations and solutions. However, SMEs are not homogeneous. They are diverse with different vulnerabilities, cybersecurity needs, and competencies. Few studies considered such differences in standards and certificates for security tools adoption and cybersecurity tailoring for these SMEs. This study proposes a classification framework with an outline of cybersecurity improvement needs for each class. The framework suggests five SME types based on their characteristics and specific security needs: cybersecurity abandoned SME, unskilled SME, expert-connected SME, capable SME, and cybersecurity provider SME. In addition to describing the five classes, the study explains the framework's usage in sampled SMEs. The framework proposes solutions for each class to approach cybersecurity awareness and competence more consistent with SME needs. The final publication is available at ACM Digital Library via this https URL https://doi.org/10.1145/3465481.3469200",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2110.05370v1",
+        "date": "2021-10-11",
+        "readability_score": 43.560843659675136
+    },
+    {
+        "id": "arxiv_751528",
+        "title": "To Patch or Not to Patch: Motivations, Challenges, and Implications for Cybersecurity",
+        "content": "As technology has become more embedded into our society, the security of modern-day systems is paramount. One topic which is constantly under discussion is that of patching, or more specifically, the installation of updates that remediate security vulnerabilities in software or hardware systems. This continued deliberation is motivated by complexities involved with patching; in particular, the various incentives and disincentives for organizations and their cybersecurity teams when deciding whether to patch. In this paper, we take a fresh look at the question of patching and critically explore why organizations and IT/security teams choose to patch or decide against it (either explicitly or due to inaction). We tackle this question by aggregating and synthesizing prominent research and industry literature on the incentives and disincentives for patching, specifically considering the human aspects in the context of these motives. Through this research, this study identifies key motivators such as organizational needs, the IT/security team's relationship with vendors, and legal and regulatory requirements placed on the business and its staff. There are also numerous significant reasons discovered for why the decision is taken not to patch, including limited resources (e.g., person-power), challenges with manual patch management tasks, human error, bad patches, unreliable patch management tools, and the perception that related vulnerabilities would not be exploited. These disincentives, in combination with the motivators above, highlight the difficult balance that organizations and their security teams need to maintain on a daily basis. Finally, we conclude by discussing implications of these findings and important future considerations.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2502.17703v1",
+        "date": "2025-02-24",
+        "readability_score": 45.076347344376664
+    },
+    {
+        "id": "arxiv_754636",
+        "title": "Given Enough Eyeballs, All Bugs Are Shallow? Revisiting Eric Raymond with Bug Bounty Programs",
+        "content": "Bug bounty programs offer a modern platform for organizations to crowdsource their software security and for security researchers to be fairly rewarded for the vulnerabilities they find. Little is known however on the incentives set by bug bounty programs: How they drive new bug discoveries, and how they supposedly improve security through the progressive exhaustion of discoverable vulnerabilities. Here, we recognize that bug bounty programs create tensions, for organizations running them on the one hand, and for security researchers on the other hand. At the level of one bug bounty program, security researchers face a sort of St-Petersburg paradox: The probability of finding additional bugs decays fast, and thus can hardly be matched with a sufficient increase of monetary rewards. Furthermore, bug bounty program managers have an incentive to gather the largest possible crowd to ensure a larger pool of expertise, which in turn increases competition among security researchers. As a result, we find that researchers have high incentives to switch to newly launched programs, for which a reserve of low-hanging fruit vulnerabilities is still available. Our results inform on the technical and economic mechanisms underlying the dynamics of bug bounty program contributions, and may in turn help improve the mechanism design of bug bounty programs that get increasingly adopted by cybersecurity savvy organizations.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/1608.03445v2",
+        "date": "2016-08-11",
+        "readability_score": 54.23250535308821
+    },
+    {
+        "id": "arxiv_592847",
+        "title": "NATOs Mission-Critical Space Capabilities under Threat: Cybersecurity Gaps in the Military Space Asset Supply Chain",
+        "content": "The North Atlantic Treaty Organizations (NATO) public-private Space Asset Supply Chain (SASC) currently exhibits significant cybersecurity gaps. It is well-established that data obtained from space assets is fundamental to NATO, as they allow for the facilitation of its missions, self-defence and effective deterrence of its adversaries. Any hostile cyber operation, suspending control over a space asset, severely impacts both NATO missions and allied Member States national security. This threat is exacerbated by NATOs mostly unregulated cyber SASC. Hence, this thesis answers a twofold research question: a) What are current cybersecurity gaps along NATOs global SASC; and b) How can NATO and its allied Member States gain greater control over such gaps to safeguard the supply of NATO mission-critical information? An ontological field study is carried out by conducting nineteen semi-structured interviews with high-level representatives from relevant public, private and academic organizations. This research was undertaken in collaboration with the NATO Cooperative Cyber Defence Centre of Excellence (CCDCOE) in Tallinn, Estonia. This thesis concludes that current cybersecurity gaps along NATOs SASC are caused by cyber vulnerabilities such as legacy systems or the use of Commercial-Off-the-Shelf (COTS) technology. Inadequate cyber SASC management is caused by hindrances such as misaligned classification levels and significant understaffing. On this basis, NATO should consider two major collaboration initiatives: a) Raising Awareness throughout the whole of the NATO system, and b) Pushing forward the creation of regulation through a standardized security framework on SASC cybersecurity. Doing so would enable NATO and its Member States to recognise cyberthreats to mission-critical data early on along its cyber SASC, and thus increase transparency, responsibility, and liability.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2102.09674v1",
+        "date": "2021-02-18",
+        "readability_score": 71.12045909022459
+    },
+    {
+        "id": "arxiv_25332",
+        "title": "Social Engineering in Cybersecurity: A Domain Ontology and Knowledge Graph Application Examples",
+        "content": "Social engineering has posed a serious threat to cyberspace security. To protect against social engineering attacks, a fundamental work is to know what constitutes social engineering. This paper first develops a domain ontology of social engineering in cybersecurity and conducts ontology evaluation by its knowledge graph application. The domain ontology defines 11 concepts of core entities that significantly constitute or affect social engineering domain, together with 22 kinds of relations describing how these entities related to each other. It provides a formal and explicit knowledge schema to understand, analyze, reuse and share domain knowledge of social engineering. Furthermore, this paper builds a knowledge graph based on 15 social engineering attack incidents and scenarios. 7 knowledge graph application examples (in 6 analysis patterns) demonstrate that the ontology together with knowledge graph is useful to 1) understand and analyze social engineering attack scenario and incident, 2) find the top ranked social engineering threat elements (e.g. the most exploited human vulnerabilities and most used attack mediums), 3) find potential social engineering threats to victims, 4) find potential targets for social engineering attackers, 5) find potential attack paths from specific attacker to specific target, and 6) analyze the same origin attacks.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2106.01157v1",
+        "date": "2021-05-28",
+        "readability_score": 74.46396721694082
+    },
+    {
+        "id": "arxiv_130418",
+        "title": "Process-Driven Visual Analysis of Cybersecurity Capture the Flag Exercises",
+        "content": "Hands-on training sessions become a standard way to develop and increase knowledge in cybersecurity. As practical cybersecurity exercises are strongly process-oriented with knowledge-intensive processes, process mining techniques and models can help enhance learning analytics tools. The design of our open-source analytical dashboard is backed by guidelines for visualizing multivariate networks complemented with temporal views and clustering. The design aligns with the requirements for post-training analysis of a special subset of cybersecurity exercises -- supervised Capture the Flag games. Usability is demonstrated in a case study using trainees' engagement measurement to reveal potential flaws in training design or organization.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2509.15589v2",
+        "date": "2025-09-19",
+        "readability_score": 79.49682206788495
+    },
+    {
+        "id": "arxiv_443194",
+        "title": "Proportionate Cybersecurity for Micro-SMEs: A Governance Design Model under NIS2",
+        "content": "Micro and small enterprises (SMEs) remain structurally vulnerable to cyber threats while facing capacity constraints that make formal compliance burdensome. This article develops a governance design model for proportionate SME cybersecurity, grounded in an awareness-first logic and informed by the EU Squad 2025 experience. Using a qualitative policy-analysis and conceptual policy-design approach, we reconstruct a seven-dimension preventive architecture: awareness and visibility, human behaviour, access control, system hygiene, data protection, detection and response, and continuous review, and justify each dimension's contribution to proportionality and risk reduction. We then map the model's regulatory scope and limits against the NIS2 Directive, Commission Implementing Regulation (EU) 2024/2690, the Digital Operational Resilience Act (DORA), the Cyber Resilience Act (CRA), and the EU Action Plan on Cybersecurity for Hospitals, clarifying which obligations are supported and which require complementary governance (e.g. role accountability, incident timelines, statements of applicability, sector-specific testing and procurement). The analysis argues that raising awareness is the fastest, scalable lever to increase cyber-risk sensitivity in micro-SMEs and complements, rather than replaces, formal compliance. We conclude with policy implications for EU and national programmes seeking practical, proportionate pathways to SME cyber resilience under NIS2.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2511.02898v2",
+        "date": "2025-11-04",
+        "readability_score": 53.461090484102044
+    },
+    {
+        "id": "arxiv_624325",
+        "title": "Leveraging Sharing Communities to Achieve Federated Learning for Cybersecurity",
+        "content": "Automated cyber threat detection in computer networks is a major challenge in cybersecurity. The cyber domain has inherent challenges that make traditional machine learning techniques problematic, specifically the need to learn continually evolving attacks through global collaboration while maintaining data privacy, and the varying resources available to network owners. We present a scheme to mitigate these difficulties through an architectural approach using community model sharing with a streaming analytic pipeline. Our streaming approach trains models incrementally as each log record is processed, thereby adjusting to concept drift resulting from changing attacks. Further, we designed a community sharing approach which federates learning through merging models without the need to share sensitive cyber-log data. Finally, by standardizing data and Machine Learning processes in a modular way, we provide network security operators the ability to manage cyber threat events and model sensitivity through community member and analytic method weighting in ways that are best suited for their available resources and data.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2104.11763v2",
+        "date": "2021-04-23",
+        "readability_score": 46.14684459401244
+    },
+    {
+        "id": "arxiv_11610",
+        "title": "Cyber Pirates Ahoy! An Analysis of Cybersecurity Challenges in the Shipping Industry",
+        "content": "Maritime shipping has become a trillion-dollar industry that now impacts the economy of virtually every country around the world. It is therefore no surprise that countries and companies have spent billions of dollars to modernize shipping vessels and ports with various technologies. However, the implementation of these technologies has also caught the attention of cybercriminals. For example, a cyberattack on one shipping company resulted in nearly $300 millions in financial losses. Hence, this paper describes cybersecurity vulnerabilities present in the international shipping business. The contribution of this paper is the identification and dissection of cyber vulnerabilities specific to the shipping industry, along with how and why these potential vulnerabilities exist.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2208.03607v1",
+        "date": "2022-08-07",
+        "readability_score": 68.40631374953685
+    },
+    {
+        "id": "arxiv_47449",
+        "title": "Relation-aware based Siamese Denoising Autoencoder for Malware Few-shot Classification",
+        "content": "When malware employs an unseen zero-day exploit, traditional security measures such as vulnerability scanners and antivirus software can fail to detect them. This is because these tools rely on known patches and signatures, which do not exist for new zero-day attacks. Furthermore, existing machine learning methods, which are trained on specific and occasionally outdated malware samples, may struggle to adapt to features in new malware. To address this issue, there is a need for a more robust machine learning model that can identify relationships between malware samples without being trained on a particular malware feature set. This is particularly crucial in the field of cybersecurity, where the number of malware samples is limited and obfuscation techniques are widely used. Current approaches using stacked autoencoders aim to remove the noise introduced by obfuscation techniques through reconstruction of the input. However, this approach ignores the semantic relationships between features across different malware samples. To overcome this limitation, we propose a novel Siamese Neural Network (SNN) that uses relation-aware embeddings to calculate more accurate similarity probabilities based on semantic details of different malware samples. In addition, by using entropy images as inputs, our model can extract better structural information and subtle differences in malware signatures, even in the presence of obfuscation techniques. Evaluations on two large malware sample sets using the N-shot and N-way methods show that our proposed model is highly effective in predicting previously unseen malware, even in the presence of obfuscation techniques.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2411.14029v1",
+        "date": "2024-11-21",
+        "readability_score": 65.36025295059787
+    },
+    {
+        "id": "arxiv_155781",
+        "title": "AdaPhish: AI-Powered Adaptive Defense and Education Resource Against Deceptive Emails",
+        "content": "Phishing attacks remain a significant threat in the digital age, yet organizations lack effective methods to tackle phishing attacks without leaking sensitive information. Phish bowl initiatives are a vital part of cybersecurity efforts against these attacks. However, traditional phish bowls require manual anonymization and are often limited to internal use. To overcome these limitations, we introduce AdaPhish, an AI-powered phish bowl platform that automatically anonymizes and analyzes phishing emails using large language models (LLMs) and vector databases. AdaPhish achieves real-time detection and adaptation to new phishing tactics while enabling long-term tracking of phishing trends. Through automated reporting, adaptive analysis, and real-time alerts, AdaPhish presents a scalable, collaborative solution for phishing detection and cybersecurity education.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2502.03622v2",
+        "date": "2025-02-05",
+        "readability_score": 49.520234549204204
+    },
+    {
+        "id": "arxiv_336840",
+        "title": "Cybersecurity Dynamics: A Foundation for the Science of Cybersecurity",
+        "content": "Cybersecurity Dynamics is new concept that aims to achieve the modeling, analysis, quantification, and management of cybersecurity from a holistic perspective, rather than from a building-blocks perspective. It is centered at modeling and analyzing the attack-defense interactions in cyberspace, which cause a ``natural'' phenomenon -- the evolution of the global cybersecurity state. In this Chapter, we systematically introduce and review the Cybersecurity Dynamics foundation for the Science of Cybersecurity. We review the core concepts, technical approaches, research axes, and results that have been obtained in this endeavor. We outline a research roadmap towards the ultimate research goal, including a systematic set of technical barriers.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2010.05683v1",
+        "date": "2020-10-09",
+        "readability_score": 49.097431804924504
+    },
+    {
+        "id": "arxiv_193404",
+        "title": "Threats and Security Strategies for IoMT Infusion Pumps",
+        "content": "The integration of the Internet of Medical Things (IoMT) into healthcare systems has transformed patient care by enabling real-time monitoring, enhanced diagnostics, and enhanced operational efficiency. However, this increased connectivity has also expanded the attack surface for cybercriminals, raising significant cybersecurity and privacy concerns. This study focuses on the cybersecurity vulnerabilities of IoMT infusion pumps, which are critical devices in modern healthcare. Through a targeted literature review of the past five years, we analyzed seven current studies from a pool of 132 papers to identify security vulnerabilities. Our findings indicate that infusion pumps face vulnerabilities such as device-level flaws, authentication and access control issues, network and communication weaknesses, data security and privacy risks, and operational or organizational challenges that can expose them to lateral attacks within healthcare networks. Our analysis synthesizes findings from seven recent studies to clarify how and why infusion pumps remain vulnerable in each of these areas. By categorizing the security gaps, we highlight critical risk patterns and their implications. This work underscores the scope of the issue and provides a structured understanding that is valuable for healthcare IT professionals and device manufacturers. Ultimately, the findings can inform the development of targeted, proactive security strategies to better safeguard infusion pumps and protect patient well-being.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2509.14604v1",
+        "date": "2025-09-18",
+        "readability_score": 62.2867610049298
+    },
+    {
+        "id": "arxiv_840446",
+        "title": "Training a quantum annealing based restricted Boltzmann machine on cybersecurity data",
+        "content": "We present a real-world application that uses a quantum computer. Specifically, we train a RBM using QA for cybersecurity applications. The D-Wave 2000Q has been used to implement QA. RBMs are trained on the ISCX data, which is a benchmark dataset for cybersecurity. For comparison, RBMs are also trained using CD. CD is a commonly used method for RBM training. Our analysis of the ISCX data shows that the dataset is imbalanced. We present two different schemes to balance the training dataset before feeding it to a classifier. The first scheme is based on the undersampling of benign instances. The imbalanced training dataset is divided into five sub-datasets that are trained separately. A majority voting is then performed to get the result. Our results show the majority vote increases the classification accuracy up from 90.24% to 95.68%, in the case of CD. For the case of QA, the classification accuracy increases from 74.14% to 80.04%. In the second scheme, a RBM is used to generate synthetic data to balance the training dataset. We show that both QA and CD-trained RBM can be used to generate useful synthetic data. Balanced training data is used to evaluate several classifiers. Among the classifiers investigated, K-Nearest Neighbor (KNN) and Neural Network (NN) perform better than other classifiers. They both show an accuracy of 93%. Our results show a proof-of-concept that a QA-based RBM can be trained on a 64-bit binary dataset. The illustrative example suggests the possibility to migrate many practical classification problems to QA-based techniques. Further, we show that synthetic data generated from a RBM can be used to balance the original dataset.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2011.13996v4",
+        "date": "2020-11-24",
+        "readability_score": 59.43791895436492
+    },
+    {
+        "id": "arxiv_425624",
+        "title": "Cybersecurity Cost of Quality: Managing the Costs of Cybersecurity Risk Management",
+        "content": "There is no standard yet for measuring and controlling the costs associated with implementing cybersecurity programs. To advance research and practice towards this end, we develop a mapping using the well-known concept of quality costs and the Framework Core within the Cybersecurity Framework produced by the National Institute of Standards and Technology (NIST) in response to the Cybersecurity Enhancement Act of 2014. This mapping can be easily adopted by organizations that are already using the NIST CSF for cybersecurity risk management to plan, manage, and continually improve cybersecurity operations. If an organization is not using the NIST CSF, this mapping may still be useful for linking elements in accounting systems that are associated with cybersecurity operations and risk management to a quality cost model.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/1707.02653v1",
+        "date": "2017-07-09",
+        "readability_score": 48.20921083047637
+    },
+    {
+        "id": "arxiv_474592",
+        "title": "Cybersecurity Dynamics",
+        "content": "We explore the emerging field of {\\em Cybersecurity Dynamics}, a candidate foundation for the Science of Cybersecurity.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/1502.05100v1",
+        "date": "2015-02-18",
+        "readability_score": 51.51765940842658
+    },
+    {
+        "id": "arxiv_992990",
+        "title": "Adopting the Cybersecurity Concepts into Curriculum The Potential Effects on Students Cybersecurity Knowledge",
+        "content": "This study examines the effect of adopting cybersecurity concepts on the IT curriculum and determines the potential effect on students' knowledge of cybersecurity practices and level of awareness. To this end, a pilot study was first conducted to measure the current level of cybersecurity awareness. The results revealed that students do not have much knowledge of Cybersecurity. Thus, a four-step approach was proposed to infuse the relevant cybersecurity topics in five matched courses based on the latest Cybersecurity curricular guidelines (CSEC2017). A sample of 42 students was selected purposively without prior knowledge of Cybersecurity and divided identically into experimental and control groups. Students in the experimental group were asked to take five consecutive courses over five semesters. In each course, groups went through a pre-test for the infused topics. Then, the experimental group taught the corresponding infused topics. A post-test was administered to both groups at the end of each course, and the t-test was conducted. The results found significant differences between marks of prior and post-tests for 11 out of 14 infused topics. These satisfactory results would encourage universities to infuse cybersecurity concepts into their curriculum",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2209.10407v1",
+        "date": "2022-09-12",
+        "readability_score": 62.207824150212524
+    },
+    {
+        "id": "arxiv_539993",
+        "title": "Cultivating Cybersecurity: Designing a Cybersecurity Curriculum for the Food and Agriculture Sector",
+        "content": "As technology increasingly integrates into farm settings, the food and agriculture sector has become vulnerable to cyberattacks. However, previous research has indicated that many farmers and food producers lack the cybersecurity education they require to identify and mitigate the growing number of threats and risks impacting the industry. This paper presents an ongoing research effort describing a cybersecurity initiative to educate various populations in the farming and agriculture community. The initiative proposes the development and delivery of a ten-module cybersecurity course, to create a more secure workforce, focusing on individuals who, in the past, have received minimal exposure to cybersecurity education initiatives.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2503.16292v1",
+        "date": "2025-03-20",
+        "readability_score": 79.1717837795637
+    },
+    {
+        "id": "arxiv_178312",
+        "title": "A Systems Thinking for Cybersecurity Modeling",
+        "content": "Solving cybersecurity issues requires a holistic understanding of components, factors, structures and their interactions in cyberspace, but conventional modeling approaches view the field of cybersecurity by their boundaries so that we are still not clear to cybersecurity and its changes. In this paper, we attempt to discuss the application of systems thinking approaches to cybersecurity modeling. This paper reviews the systems thinking approaches and provides the systems theories and methods for tackling cybersecurity challenges, regarding relevant fields, associated impact factors and their interactions. Moreover, an illustrative example of systems thinking frameworks for cybersecurity modeling is developed to help broaden the mind in methodology, theory, technology and practice. This article concludes that systems thinking can be considered as one of the powerful tools of cybersecurity modeling to find, characterize, understand, evaluate and predict cybersecurity.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2001.05734v1",
+        "date": "2020-01-16",
+        "readability_score": 76.02861045500049
+    },
+    {
+        "id": "arxiv_876112",
+        "title": "Offensive Robot Cybersecurity",
+        "content": "Offensive Robot Cybersecurity introduces a groundbreaking approach by advocating for offensive security methods empowered by means of automation. It emphasizes the necessity of understanding attackers' tactics and identifying vulnerabilities in advance to develop effective defenses, thereby improving robots' security posture. This thesis leverages a decade of robotics experience, employing Machine Learning and Game Theory to streamline the vulnerability identification and exploitation process. Intrinsically, the thesis uncovers a profound connection between robotic architecture and cybersecurity, highlighting that the design and creation aspect of robotics deeply intertwines with its protection against attacks. This duality -- whereby the architecture that shapes robot behavior and capabilities also necessitates a defense mechanism through offensive and defensive cybersecurity strategies -- creates a unique equilibrium. Approaching cybersecurity with a dual perspective of defense and attack, rooted in an understanding of systems architecture, has been pivotal. Through comprehensive analysis, including ethical considerations, the development of security tools, and executing cyber attacks on robot software, hardware, and industry deployments, this thesis proposes a novel architecture for cybersecurity cognitive engines. These engines, powered by advanced game theory and machine learning, pave the way for autonomous offensive cybersecurity strategies for robots, marking a significant shift towards self-defending robotic systems. This research not only underscores the importance of offensive measures in enhancing robot cybersecurity but also sets the stage for future advancements where robots are not just resilient to cyber threats but are equipped to autonomously safeguard themselves.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2506.15343v1",
+        "date": "2025-06-18",
+        "readability_score": 71.1339347159817
+    },
+    {
+        "id": "arxiv_314826",
+        "title": "Cybersecurity: Past, Present and Future",
+        "content": "The digital transformation has created a new digital space known as cyberspace. This new cyberspace has improved the workings of businesses, organizations, governments, society as a whole, and day to day life of an individual. With these improvements come new challenges, and one of the main challenges is security. The security of the new cyberspace is called cybersecurity. Cyberspace has created new technologies and environments such as cloud computing, smart devices, IoTs, and several others. To keep pace with these advancements in cyber technologies there is a need to expand research and develop new cybersecurity methods and tools to secure these domains and environments. This book is an effort to introduce the reader to the field of cybersecurity, highlight current issues and challenges, and provide future directions to mitigate or resolve them. The main specializations of cybersecurity covered in this book are software security, hardware security, the evolution of malware, biometrics, cyber intelligence, and cyber forensics. We must learn from the past, evolve our present and improve the future. Based on this objective, the book covers the past, present, and future of these main specializations of cybersecurity. The book also examines the upcoming areas of research in cyber intelligence, such as hybrid augmented and explainable artificial intelligence (AI). Human and AI collaboration can significantly increase the performance of a cybersecurity system. Interpreting and explaining machine learning models, i.e., explainable AI is an emerging field of study and has a lot of potentials to improve the role of AI in cybersecurity.",
+        "category": "Cybersecurity",
+        "source": "http://arxiv.org/abs/2207.01227v3",
+        "date": "2022-07-04",
+        "readability_score": 81.73678973441083
+    },
+    {
+        "id": "arxiv_901668",
+        "title": "ChainSplitter: Towards Blockchain-based Industrial IoT Architecture for Supporting Hierarchical Storage",
+        "content": "The fast developing Industrial Internet of Things (IIoT) technologies provide a promising opportunity to build large-scale systems to connect numerous heterogeneous devices into the Internet. Most existing IIoT infrastructures are based on a centralized architecture, which is easier for management but cannot effectively support immutable and verifiable services among multiple parties. Blockchain technology provides many desired features for large-scale IIoT infrastructures, such as decentralization, trustworthiness, trackability, and immutability. This paper presents a blockchain-based IIoT architecture to support immutable and verifiable services. However, when applying blockchain technology to the IIoT infrastructure, the required storage space posts a grant challenge to resource-constrained IIoT infrastructures. To address the storage issue, this paper proposes a hierarchical blockchain storage structure, \\textit{ChainSplitter}. Specially, the proposed architecture features a hierarchical storage structure where the majority of the blockchain is stored in the clouds, while the most recent blocks are stored in the overlay network of the individual IIoT networks. The proposed architecture seamlessly binds local IIoT networks, the blockchain overlay network, and the cloud infrastructure together through two connectors, the \\textit{blockchain connector} and the \\textit{cloud connector}, to construct the hierarchical blockchain storage. The blockchain connector in the overlay network builds blocks in blockchain from data generated in IIoT networks, and the cloud connector resolves the blockchain synchronization issues between the overlay network and the clouds. We also provide a case study to show the efficiency of the proposed hierarchical blockchain storage in a practical Industrial IoT case.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/1910.00742v1",
+        "date": "2019-10-02",
+        "readability_score": 76.90102636241862
+    },
+    {
+        "id": "arxiv_683471",
+        "title": "BlockSim: An Extensible Simulation Tool for Blockchain Systems",
+        "content": "Both in the design and deployment of blockchain solutions many performance-impacting configuration choices need to be made. We introduce BlockSim, a framework and software tool to build and simulate discrete-event dynamic systems models for blockchain systems. BlockSim is designed to support the analysis of a large variety of blockchains and blockchain deployments as well as a wide set of analysis questions. At the core of BlockSim is a Base Model, which contains the main model constructs common across various blockchain systems organized in three abstraction layers (network, consensus and incentives layer). The Base Model is usable for a wide variety of blockchain systems and can be extended easily to include system or deployment particulars. The BlockSim software tool provides a simulator that implements the Base Model in Python. This paper describes the Base Model, the simulator implementation, and the application of BlockSim to Bitcoin, Ethereum and other consensus algorithms. We validate BlockSim simulation results by comparison with performance results from actual systems and from other studies in the literature. We close the paper by a BlockSim simulation study of the impact of uncle blocks rewards on mining decentralization, for a variety of blockchain configurations.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2004.13438v2",
+        "date": "2020-04-28",
+        "readability_score": 76.46252913932548
+    },
+    {
+        "id": "arxiv_411329",
+        "title": "SmartOil: Blockchain and smart contract-based oil supply chain management",
+        "content": "The traditional oil supply chain suffers from various shortcomings regarding crude oil extraction, processing, distribution, environmental pollution, and traceability. It offers an only a forward flow of products with almost no security and tracking process. In time, the system will lag behind due to the limitations in quality inspection, fraudulent information, and monopolistic behavior of supply chain entities. Inclusion of counterfeiting products and opaqueness of the system urge renovation in this sector. The recent evolution of Industry 4.0 leads to the alternation in the supply chain introducing the smart supply chain. Technological advancement can now reshape the infrastructure of the supply chain for the future. In this paper, we suggest a conceptual framework utilizing Blockchain and Smart Contract to monitor the overall oil supply chain. Blockchain is a groundbreaking technology to monitor and support the security building of a decentralized type supply chain over a peer-to-peer network. The use of the Internet of Things (IoT), especially sensors, opens broader window to track the global supply chain in real-time. We construct a methodology to support reverse traceability for each participant of the supply chain. The functions and characteristics of Blockchain and Smart Contract are defined. Implementation of Smart Contracts has also been shown with detailed analysis. We further describe the challenges of implementing such a system and validate our framework's adaptability in the real world. The paper concludes with future research scope to mitigate the restrictions of data management and maintenance with advanced working prototypes and agile systems achieving greater traceability and transparency.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2105.05338v1",
+        "date": "2021-05-11",
+        "readability_score": 52.51769382379375
+    },
+    {
+        "id": "arxiv_748716",
+        "title": "Blockchain-Based Federated Learning: Incentivizing Data Sharing and Penalizing Dishonest Behavior",
+        "content": "With the increasing importance of data sharing for collaboration and innovation, it is becoming more important to ensure that data is managed and shared in a secure and trustworthy manner. Data governance is a common approach to managing data, but it faces many challenges such as data silos, data consistency, privacy, security, and access control. To address these challenges, this paper proposes a comprehensive framework that integrates data trust in federated learning with InterPlanetary File System, blockchain, and smart contracts to facilitate secure and mutually beneficial data sharing while providing incentives, access control mechanisms, and penalizing any dishonest behavior. The experimental results demonstrate that the proposed model is effective in improving the accuracy of federated learning models while ensuring the security and fairness of the data-sharing process. The research paper also presents a decentralized federated learning platform that successfully trained a CNN model on the MNIST dataset using blockchain technology. The platform enables multiple workers to train the model simultaneously while maintaining data privacy and security. The decentralized architecture and use of blockchain technology allow for efficient communication and coordination between workers. This platform has the potential to facilitate decentralized machine learning and support privacy-preserving collaboration in various domains.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2307.10492v1",
+        "date": "2023-07-19",
+        "readability_score": 63.674362641836055
+    },
+    {
+        "id": "arxiv_552116",
+        "title": "Blockchain for Business Process Enactment: A Taxonomy and Systematic Literature Review",
+        "content": "Blockchain has been proposed to facilitate the enactment of interorganisational business processes. For such processes, blockchain can guarantee the enforcement of rules and the integrity of execution traces - without the need for a centralised trusted party. However, the enactment of interorganisational processes pose manifold challenges. In this work, we ask what answers the research field offers in response to those challenges. To do so, we conduct a systematic literature review (SLR). As our guiding question, we investigate the guarantees and capabilities of blockchain-based enactment approaches. Based on resulting empirical evidence, we develop a taxonomy for blockchain-based enactment. We find that a wide range of approaches support traceability and correctness; however, research focusing on flexibility and scalability remains nascent. For all challenges, we point towards future research opportunities.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2206.03237v2",
+        "date": "2022-06-07",
+        "readability_score": 72.99458571457725
+    },
+    {
+        "id": "arxiv_403728",
+        "title": "A trustless society? A political look at the blockchain vision",
+        "content": "A lot of business and research effort currently deals with the so called decentralised ledger technology blockchain. Putting it to use carries the tempting promise to make the intermediaries of social interactions superfluous and furthermore keep secure track of all interactions. Currently intermediaries such as banks and notaries are necessary and must be trusted, which creates great dependencies, as the financial crisis of 2008 painfully demonstrated. Especially banks and notaries are said to become dispensable as a result of using the blockchain. But in real-world applications of the blockchain, the power of central actors does not dissolve, it only shifts to new, democratically illegitimate, uncontrolled or even uncontrollable power centers. As interesting as the blockchain technically is, it doesn't efficiently solve any real-world problem and is no substitute for traditional political processes or democratic regulation of power. Research efforts investigating the blockchain should be halted.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2405.06097v1",
+        "date": "2024-05-09",
+        "readability_score": 41.43685443481385
+    },
+    {
+        "id": "arxiv_10466",
+        "title": "Oceanic Games: Centralization Risks and Incentives in Blockchain Mining",
+        "content": "To participate in the distributed consensus of permissionless blockchains, prospective nodes -- or miners -- provide proof of designated, costly resources. However, in contrast to the intended decentralization, current data on blockchain mining unveils increased concentration of these resources in a few major entities, typically mining pools. To study strategic considerations in this setting, we employ the concept of Oceanic Games, Milnor and Shapley (1978). Oceanic Games have been used to analyze decision making in corporate settings with small numbers of dominant players (shareholders) and large numbers of individually insignificant players, the ocean. Unlike standard equilibrium models, they focus on measuring the value (or power) per entity and per unit of resource} in a given distribution of resources. These values are viewed as strategic components in coalition formations, mergers and resource acquisitions. Considering such issues relevant to blockchain governance and long-term sustainability, we adapt oceanic games to blockchain mining and illustrate the defined concepts via examples. The application of existing results reveals incentives for individual miners to merge in order to increase the value of their resources. This offers an alternative perspective to the observed centralization and concentration of mining power. Beyond numerical simulations, we use the model to identify issues relevant to the design of future cryptocurrencies and formulate prospective research questions.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/1904.02368v4",
+        "date": "2019-04-04",
+        "readability_score": 70.19600330022975
+    },
+    {
+        "id": "arxiv_699759",
+        "title": "Customer Data Sharing Platform: A Blockchain-Based Shopping Cart",
+        "content": "We propose a new free eCommerce platform with blockchains that allows customers to connect to the seller directly, share personal data without losing control and ownership of it and apply it to the domain of shopping cart. Our new platform provides a solution to four important problems: private payment, ensuring privacy and user control, and incentives for sharing. It allows the trade to be open, transparent with immutable transactions that can be used for settling any disputes. The paper presents a case study of applying the framework for a shopping cart as one of the enterprise nodes of MultiChain which provides trading in ethers controlled by smart contracts and also collects user profile data and allows them to receive rewards for sharing their data with other business enterprises. It tracks who shared what, with whom, when, by what means and for what purposes in a verifiable fashion. The user data from the repository is converted into an open data format and shared via stream in the blockchain so that other nodes can efficiently process and use the data. The smart contract verifies and executes the agreed terms of use of the data and transfers digital tokens as a reward to the customer. The smart contract imposes double deposit collateral to ensure that all participants act honestly.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2004.13890v1",
+        "date": "2020-04-28",
+        "readability_score": 79.57964153155558
+    },
+    {
+        "id": "arxiv_286563",
+        "title": "Advanced Drone Swarm Security by Using Blockchain Governance Game",
+        "content": "This research contributes to the security design of an advanced smart drone swarm network based on a variant of the Blockchain Governance Game (BGG), which is the theoretical game model to predict the moments of security actions before attacks, and the Strategic Alliance for Blockchain Governance Game (SABGG), which is one of the BGG variants which has been adapted to construct the best strategies to take preliminary actions based on strategic alliance for protecting smart drones in a blockchain-based swarm network. Smart drones are artificial intelligence (AI)-enabled drones which are capable of being operated autonomously without having any command center. Analytically tractable solutions from the SABGG allow us to estimate the moments of taking preliminary actions by delivering the optimal accountability of drones for preventing attacks. This advanced secured swarm network within AI-enabled drones is designed by adapting the SABGG model. This research helps users to develop a new network-architecture-level security of a smart drone swarm which is based on a decentralized network.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2112.15454v4",
+        "date": "2021-12-29",
+        "readability_score": 44.34754034865562
+    },
+    {
+        "id": "arxiv_341894",
+        "title": "Digital Twins and Blockchain for IoT Management",
+        "content": "Security and privacy are primary concerns in IoT management. Security breaches in IoT resources, such as smart sensors, can leak sensitive data and compromise the privacy of individuals. Effective IoT management requires a comprehensive approach to prioritize access security and data privacy protection. Digital twins create virtual representations of IoT resources. Blockchain adds decentralization, transparency, and reliability to IoT systems. This research integrates digital twins and blockchain to manage access to IoT data streaming. Digital twins are used to encapsulate data access and view configurations. Access is enabled on digital twins, not on IoT resources directly. Trust structures programmed as smart contracts are the ones that manage access to digital twins. Consequently, IoT resources are not exposed to third parties, and access security breaches can be prevented. Blockchain has been used to validate digital twins and store their configuration. The research presented in this paper enables multitenant access and customization of data streaming views and abstracts the complexity of data access management. This approach provides access and configuration security and data privacy protection.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2309.01042v1",
+        "date": "2023-09-03",
+        "readability_score": 82.54586532390236
+    },
+    {
+        "id": "arxiv_206668",
+        "title": "Selecting Reliable Blockchain Peers via Hybrid Blockchain Reliability Prediction",
+        "content": "Blockchain and blockchain-based decentralized applications are attracting increasing attentions recently. In public blockchain systems, users usually connect to third-party peers or run a peer to join the P2P blockchain network. However, connecting to unreliable blockchain peers will make users waste resources and even lose millions of dollars of cryptocurrencies. In order to select the reliable blockchain peers, it is urgently needed to evaluate and predict the reliability of them. Faced with this problem, we propose H-BRP, Hybrid Blockchain Reliability Prediction model to extract the blockchain reliability factors then make personalized prediction for each user. Large-scale real-world experiments are conducted on 100 blockchain requesters and 200 blockchain peers. The implement and dataset of 2,000,000 test cases are released. The experimental results show that the proposed model obtains better accuracy than other approaches.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/1910.14614v1",
+        "date": "2019-10-31",
+        "readability_score": 46.50659231120495
+    },
+    {
+        "id": "arxiv_977015",
+        "title": "Private and Secure Post-Quantum Verifiable Random Function with NIZK Proof and Ring-LWE Encryption in Blockchain",
+        "content": "We present a secure and private blockchain-based Verifiable Random Function (VRF) scheme addressing some limitations of classical VRF constructions. Given the imminent quantum computing adversarial scenario, conventional cryptographic methods face vulnerabilities. To enhance our VRF's secure randomness, we adopt post-quantum Ring-LWE encryption for synthesizing pseudo-random sequences. Considering computational costs and resultant on-chain gas costs, we suggest a bifurcated architecture for VRF design, optimizing interactions between on-chain and off-chain. Our approach employs a secure ring signature supported by NIZK proof and a delegated key generation method, inspired by the Chaum-Pedersen equality proof and the Fiat-Shamir Heuristic. Our VRF scheme integrates multi-party computation (MPC) with blockchain-based decentralized identifiers (DID), ensuring both security and randomness. We elucidate the security and privacy aspects of our VRF scheme, analyzing temporal and spatial complexities. We also approximate the entropy of the VRF scheme and detail its implementation in a Solidity contract. Also, we delineate a method for validating the VRF's proof, matching for the contexts requiring both randomness and verification. Conclusively, using the NIST SP800-22 of the statistical randomness test suite, our results exhibit a 98.86% pass rate over 11 test cases, with an average p-value of 0.5459 from 176 total tests.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2311.11734v2",
+        "date": "2023-11-20",
+        "readability_score": 44.207264759091856
+    },
+    {
+        "id": "arxiv_978997",
+        "title": "Bunny Hops and Blockchain Stops: Cross-Chain MEV Detection With N-Hops",
+        "content": "This student paper introduces a novel methodology for the detection and analysis of multihop cross-chain arbitrage opportunities, wherein multihop denotes arbitrage sequences involving more than two transactional steps across distinct blockchain networks, executed using sequence-dependent strategies. Utilizing a comprehensive dataset comprising over 2.4 billion transactions recorded between September 2023 and August 2024 (encompassing 12 blockchain platforms and 45 cross-chain bridges) we design and implement an algorithm capable of identifying, sequence-dependent arbitrage paths spanning multiple ecosystems. Our empirical analysis demonstrates that such arbitrage opportunities are exceedingly infrequent, underscoring the inherent challenges associated with multihop execution in cross-chain environments.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2511.17527v2",
+        "date": "2025-10-24",
+        "readability_score": 56.64526082569982
+    },
+    {
+        "id": "arxiv_240049",
+        "title": "PiChu: Accelerating Block Broadcasting in Blockchain Networks with Pipelining and Chunking",
+        "content": "Blockchain technologies have been rapidly enhanced in recent years. However, its scalability still has limitations in terms of throughput and broadcast delay as the network and the amount of transaction data increase. To improve scalability of blockchain networks, we propose a novel approach named PiChu that accelerates block propagation in blockchain networks by pipelining and verifying chunks of a block in parallel. Accelerating block propagation reduces the mining interval and chance of fork occurring, which in turn increases throughput. Our approach can be applied to the blockchain networks either directly or with a minor modification to the consensus. Through an extensive and large scale simulations, we validate that the proposed PiChu scheme significantly enhances the scalability of blockchain networks. For instance, a 64 MB block can be broadcasted in just 80 seconds in a blockchain network with a million nodes. The efficiency of PiChu broadcasting increases with bigger block sizes and a larger number of nodes in the network.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2101.08212v1",
+        "date": "2021-01-20",
+        "readability_score": 70.6322403727975
+    },
+    {
+        "id": "arxiv_344715",
+        "title": "Trends in Development of Databases and Blockchain",
+        "content": "This work is about the mutual influence between two technologies: Databases and Blockchain. It addresses two questions: 1. How the database technology has influenced the development of blockchain technology?, and 2. How blockchain technology has influenced the introduction of new functionalities in some modern databases? For the first question, we explain how database technology contributes to blockchain technology by unlocking different features such as ACID (Atomicity, Consistency, Isolation, and Durability) transactional consistency, rich queries, real-time analytics, and low latency. We explain how the CAP (Consistency, Availability, Partition tolerance) theorem known for databases influenced the DCS (Decentralization, Consistency, Scalability) theorem for the blockchain systems. By using an analogous relaxation approach as it was used for the proof of the CAP theorem, we postulate a \"DCS-satisfiability conjecture.\" For the second question, we review different databases that are designed specifically for blockchain and provide most of the blockchain functionality like immutability, privacy, censorship resistance, along with database features.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2003.05687v1",
+        "date": "2020-03-12",
+        "readability_score": 50.12226527770348
+    },
+    {
+        "id": "arxiv_621012",
+        "title": "Permissionless Blockchains and Secure Logging",
+        "content": "The blockchain technology enables mutually untrusting participants to reach consensus on the state of a distributed and decentralized ledger (called a blockchain) in a permissionless setting. The consensus protocol of the blockchain imposes a unified view of the system state over the global network, and once a block is stable in the blockchain, its data is visible to all users and cannot be retrospectively modified or removed. Due to these properties, the blockchain technology is regarded as a general consensus infrastructure and based on which a variety of systems have been built. This article presents a study and survey of permissionless blockchain systems in the context of secure logging. We postulate the most essential properties required by a secure logging system and by considering a wide range of applications, we give insights into how the blockchain technology matches these requirements. Based on the survey, we motivate related research perspectives and challenges for blockchain-based secure logging systems, and we highlight potential solutions to some specific problems.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/1903.03954v1",
+        "date": "2019-03-10",
+        "readability_score": 60.113415754010504
+    },
+    {
+        "id": "arxiv_233620",
+        "title": "LedgerGuard: Improving Blockchain Ledger Dependability",
+        "content": "The rise of crypto-currencies has spawned great interest in their underlying technology, namely, Blockchain. The central component in a Blockchain is a shared distributed ledger. A ledger comprises series of blocks, which in turns contains a series of transactions. An identical copy of the ledger is stored on all nodes in a blockchain network. Maintaining ledger integrity and security is one of the crucial design aspects of any blockchain platform. Thus, there are typically built-in validation mechanisms leveraging cryptography to ensure the validity of incoming blocks before committing them into the ledger. However, a blockchain node may run over an extended period of time, during which the blocks on the disk can may become corrupted due to software or hardware failures, or due to malicious activity. This paper proposes LedgerGuard, a tool to maintain ledger integrity by detecting corrupted blocks and recovering these blocks by synchronizing with rest of the network. The experimental implementation of LedgerGuard is based on Hyperledger Fabric, which is a popular open source permissioned blockchain platform.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/1805.01081v1",
+        "date": "2018-05-03",
+        "readability_score": 83.07718857347058
+    },
+    {
+        "id": "arxiv_198609",
+        "title": "XBlock-ETH: Extracting and Exploring Blockchain Data From Ethereum",
+        "content": "Blockchain-based cryptocurrencies have received extensive attention recently. Massive data has been stored on permission-less blockchains. The analysis on massive blockchain data can bring huge business values. However, the lack of well-processed up-to-date blockchain datasets impedes big data analytics of blockchain data. To fill this gap, we collect and process the up-to-date on-chain data from Ethereum, which is one of the most popular permission-less blockchains. We name these well-processed Ethereum datasets as XBlock-ETH, which consists of the data of blockchain transactions, smart contracts, and cryptocurrencies (i.e., tokens). The basic statistics and exploration of these datasets are presented. We also outline the possible research opportunities. The datasets with the raw data and codes have been publicly released online.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/1911.00169v2",
+        "date": "2019-11-01",
+        "readability_score": 82.22110466837202
+    },
+    {
+        "id": "arxiv_581864",
+        "title": "Fully Decentralised Consensus for Extreme-scale Blockchain",
+        "content": "Blockchain is a decentralised, immutable ledger technology that has been widely adopted in many sectors for various applications such as cryptocurrencies, smart contracts and supply chain management. Distributed consensus is a fundamental component of blockchain, which is required to ensure trust, security, and integrity of the data stored and the transactions processed in the blockchain. Various consensus algorithms have been developed, each affected from certain issues such as node failures, high resource consumption, collusion, etc. This work introduces a fully decentralised consensus protocol, Blockchain Epidemic Consensus Protocol (BECP), suitable for very large and extreme-scale blockchain systems. The proposed approach leverages the benefits of epidemic protocols, such as no reliance on a fixed set of validators or leaders, probabilistic guarantees of convergence, efficient use of network resources, and tolerance to node and network failures. A comparative experimental analysis has been carried out with traditional protocols including PAXOS, RAFT, and Practical Byzantine Fault Tolerance (PBFT), as well as a relatively more recent protocol such as Avalanche, which is specifically designed for very large-scale systems. The results illustrate how BECP outperforms them in terms of throughput, scalability and consensus latency. BECP achieves an average of 1.196 times higher throughput in terms of consensus on items and 4.775 times better average consensus latency. Furthermore, BECP significantly reduces the number of messages compared to Avalanche. These results demonstrate the effectiveness and efficiency of fully decentralised consensus for blockchain technology based on epidemic protocols.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2508.02595v1",
+        "date": "2025-08-04",
+        "readability_score": 48.37357743534771
+    },
+    {
+        "id": "arxiv_745743",
+        "title": "Proximity Neighbor Selection in Blockchain Networks",
+        "content": "Blockchains have attracted a great deal of attention as a technology for the distributed management of register information at multiple nodes without a centralized system. However, they possess the drawbacks of low transaction throughput and long approval time. These problems can be addressed by shortening the block generation interval; however, shortening this interval alone has the effect of increasing the frequency of forks. In this study, we aim to shorten the block generation interval without increasing the fork generation rate by improving the network topology of the nodes and shortening the propagation time. We propose a neighbor node selection method forming a network topology with a short block propagation time. A blockchain simulator is used to demonstrate the effect of the proposed neighbor node selection method on the propagation delay of the network. This result indicates that the proposed method improves block propagation time.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/1906.00719v1",
+        "date": "2019-06-03",
+        "readability_score": 42.08766102353028
+    },
+    {
+        "id": "arxiv_418110",
+        "title": "Advancing Consumer Adoption of Blockchain Applications",
+        "content": "Blockchain technology as a whole is experiencing a dramatic rise in adoption, in no small part due to the developer-friendly Ethereum network. While the number of smart-contract powered distributed applications (Dapps) continues to rise, they face many of the same challenges all new technologies face as they are introduced to a market. By modeling the consumer adoption of blockchain technology and analyzing scholarly literature on supply-side factors affecting the diffusion of technology, we seek to prove the growth of a Dapp can be accelerated using abstraction, whole product planning, and complementaries.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/1705.04769v1",
+        "date": "2017-05-12",
+        "readability_score": 40.584117825746674
+    },
+    {
+        "id": "arxiv_316322",
+        "title": "The Cost of Executing Business Processes on Next-Generation Blockchains: The Case of Algorand",
+        "content": "Process (or workflow) execution on blockchain suffers from limited scalability; specifically, costs in the form of transactions fees are a major limitation for employing traditional public blockchain platforms in practice. Research, so far, has mainly focused on exploring first (Bitcoin) and second-generation (e.g., Ethereum) blockchains for business process enactment. However, since then, novel blockchain systems have been introduced - aimed at tackling many of the problems of previous-generation blockchains. We study such a system, Algorand, from a process execution perspective. Algorand promises low transaction fees and fast finality. However, Algorand's cost structure differs greatly from previous generation blockchains, rendering earlier cost models for blockchain-based process execution non-applicable. We discuss and contrast Algorand's novel cost structure with Ethereum's well-known cost model. To study the impact for process execution, we present a compiler for BPMN Choreographies, with an intermediary layer, which can support multi-platform output, and provide a translation to TEAL contracts, the smart contract language of Algorand. We compare the cost of executing processes on Algorand to previous work as well as traditional cloud computing. In short: they allow vast cost benefits. However, we note a multitude of future research challenges that remain in investigating and comparing such results.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2407.06725v1",
+        "date": "2024-07-09",
+        "readability_score": 51.4304725325104
+    },
+    {
+        "id": "arxiv_167120",
+        "title": "Blockchain in Space Industry: Challenges and Solutions",
+        "content": "Blockchain technology can play a vital role in the space industry and exploration. This magic technology can provide decentralized and secure techniques for processing and manipulating space resources as space digital tokens. Tokenizing space resources such as orbits, satellites, spacecraft, orbital debris, asteroids, and other space objects in the form of blockchain-based digital tokens will reflect plenty of various applications in the space mining industry. Moreover, Blockchain algorithms based on smart contracts can be utilized for tracking all space transactions and communications in a transparent, verifiable, and secure manner. This paper is one of the first attempts towards conceptually investigating adopting blockchain theory in the space industry based on space digital token concept. A new conceptual blockchain in space industry framework is proposed, and new models are created for introducing proposed solutions for some major challenges in the space industry and exploration. Finally, the paper is ended with discussing SpaceChain, the first open-source blockchain-based satellite network in the world as a case study of applying blockchain theory in designing and implementing satellite systems.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2002.12878v1",
+        "date": "2020-02-27",
+        "readability_score": 43.41641755193033
+    },
+    {
+        "id": "arxiv_160635",
+        "title": "Blockchain Interoperability Landscape",
+        "content": "Blockchain has become a popular emergent technology in many industries. It is suitable for a broad range of applications, from its base role as an immutable distributed ledger to the deployment of distributed applications. Many organizations are adopting the technology, but choosing a specific blockchain implementation in an emerging field exposes them to significant technology risk. Selecting the wrong implementation could expose an organization to security vulnerabilities, reduce access to its target audience, or cause issues in the future when switching to a more mature protocol. Blockchain interoperability aims to solve this adaptability problem by increasing the extensibility of blockchain, enabling the addition of new use cases and features without sacrificing the performance of the original blockchain. However, most existing blockchain platforms need to be designed for interoperability, and simple operations like sending assets across platforms create problems. Cryptographic protocols that are secure in isolation may become insecure when several different (individually secure) protocols are composed. Similarly, utilizing trusted custodians may undercut most of the benefits of decentralization offered by blockchain-based systems. Even though there is some research and development in the field of blockchain interoperability, a characterization of the interoperability solutions for various infrastructure options is lacking. This paper presents a methodology for characterizing blockchain interoperability solutions that will help focus on new developments and evaluate existing and future solutions in this space.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2212.09227v1",
+        "date": "2022-12-19",
+        "readability_score": 77.42836318916133
+    },
+    {
+        "id": "arxiv_857712",
+        "title": "A Survey of Blockchain Applications in Different Domains",
+        "content": "Blockchains have received much attention recently since they provide decentralized approaches to the creation and management of value. Many banks, Internet companies, car manufacturers, and even governments worldwide have incorporated or started considering blockchains to improve the security, scalability, and efficiency of their services. In this paper, we survey blockchain applications in different areas. These areas include cryptocurrency, healthcare, advertising, insurance, copyright protection, energy, and societal applications. Our work provides a timely summary for individuals and organizations interested in blockchains. We envision our study to motivate more blockchain applications.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/1911.02013v1",
+        "date": "2019-11-06",
+        "readability_score": 49.27299859370601
+    },
+    {
+        "id": "arxiv_136660",
+        "title": "Protecting the Decentralized Future: An Exploration of Common Blockchain Attacks and their Countermeasures",
+        "content": "Blockchain technology transformed the digital sphere by providing a transparent, secure, and decentralized platform for data security across a range of industries, including cryptocurrencies and supply chain management. Blockchain's integrity and dependability have been jeopardized by the rising number of security threats, which have attracted cybercriminals as a target. By summarizing suggested fixes, this research aims to offer a thorough analysis of mitigating blockchain attacks. The objectives of the paper include identifying weak blockchain attacks, evaluating various solutions, and determining how effective and effective they are at preventing these attacks. The study also highlights how crucial it is to take into account the particular needs of every blockchain application. This study provides beneficial perspectives and insights for blockchain researchers and practitioners, making it essential reading for those interested in current and future trends in blockchain security research.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2306.11884v1",
+        "date": "2023-06-20",
+        "readability_score": 58.678231942475776
+    },
+    {
+        "id": "arxiv_913521",
+        "title": "Democratizing Federated Learning with Blockchain and Multi-Task Peer Prediction",
+        "content": "The synergy between Federated Learning and blockchain has been considered promising; however, the computationally intensive nature of contribution measurement conflicts with the strict computation and storage limits of blockchain systems. We propose a novel concept to decentralize the AI training process using blockchain technology and Multi-task Peer Prediction. By leveraging smart contracts and cryptocurrencies to incentivize contributions to the training process, we aim to harness the mutual benefits of AI and blockchain. We discuss the advantages and limitations of our design.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2603.28434v1",
+        "date": "2026-03-30",
+        "readability_score": 74.09573068483337
+    },
+    {
+        "id": "arxiv_465850",
+        "title": "Blockchain Epidemic Consensus for Large-Scale Networks",
+        "content": "Blockchain is a distributed ledger technology that has applications in many domains such as cryptocurrency, smart contracts, supply chain management, and many others. Distributed consensus is a fundamental component of blockchain systems that enables secure, precise, and tamper-proof verification of data without relying on central authorities. Existing consensus protocols, nevertheless, suffer from drawbacks, some of which are related to scalability, resource consumption, and fault tolerance. We introduce Blockchain Epidemic Consensus Protocol (BECP), a novel fully decentralised consensus protocol for blockchain networks at a large scale. BECP follows epidemic communication principles, without fixed roles like validators or leaders, and achieves probabilistic convergence, efficient message dissemination, and tolerance to message delays. We provide an extensive experimental comparison of BECP against classic protocols like PAXOS, RAFT, and PBFT, and newer epidemic-based protocols like Avalanche and Snowman. The findings indicate that BECP provides desirable gains in throughput, consensus latency, and substantial message-passing efficiency compared to existing epidemic-based approaches, validating its usability as an effective and scalable approach for next-generation blockchain systems.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2508.02552v1",
+        "date": "2025-08-04",
+        "readability_score": 64.913383552217
+    },
+    {
+        "id": "arxiv_234195",
+        "title": "Bitcoin's Edge: Embedded Sentiment in Blockchain Transactional Data",
+        "content": "Cryptocurrency blockchains, beyond their primary role as distributed payment systems, are increasingly used to store and share arbitrary content, such as text messages and files. Although often non-financial, this hidden content can impact price movements by conveying private information, shaping sentiment, and influencing public opinion. However, current analyses of such data are limited in scope and scalability, primarily relying on manual classification or hand-crafted heuristics. In this work, we address these limitations by employing Natural Language Processing techniques to analyze, detect patterns, and extract public sentiment encoded within blockchain transactional data. Using a variety of Machine Learning techniques, we showcase for the first time the predictive power of blockchain-embedded sentiment in forecasting cryptocurrency price movements on the Bitcoin and Ethereum blockchains. Our findings shed light on a previously underexplored source of freely available, transparent, and immutable data and introduce blockchain sentiment analysis as a novel and robust framework for enhancing financial predictions in cryptocurrency markets. Incidentally, we discover an asymmetry between cryptocurrencies; Bitcoin has an informational advantage over Ethereum in that the sentiment embedded into transactional data is sufficient to predict its price movement.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/2504.13598v1",
+        "date": "2025-04-18",
+        "readability_score": 65.67413530260673
+    },
+    {
+        "id": "arxiv_754231",
+        "title": "Access Control for Electronic Health Records with Hybrid Blockchain-Edge Architecture",
+        "content": "The global Electronic Health Record (EHR) market is growing dramatically and expected to reach $39.7 billions by 2022. To safe-guard security and privacy of EHR, access control is an essential mechanism for managing EHR data. This paper proposes a hybrid architecture to facilitate access control of EHR data by using both blockchain and edge node. Within the architecture, a blockchain-based controller manages identity and access control policies and serves as a tamper-proof log of access events. In addition, off-chain edge nodes store the EHR data and apply policies specified in Abbreviated Language For Authorization (ALFA) to enforce attribute-based access control on EHR data in collaboration with the blockchain-based access control logs. We evaluate the proposed hybrid architecture by utilizing Hyperledger Composer Fabric blockchain to measure the performance of executing smart contracts and ACL policies in terms of transaction processing time and response time against unauthorized data retrieval.",
+        "category": "Blockchain",
+        "source": "http://arxiv.org/abs/1906.01188v1",
+        "date": "2019-06-04",
+        "readability_score": 79.84904026462166
+    }
+]

@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Local dev files
+.env
+*.log
+
+# Git
+.git/
+.gitignore
+
+# Tests
+tests/
+
+# Docs
+docs/
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Misc
+*.md
+manage.py
+run.py

@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Utility Agent — Academic Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0d14;
+            --bg-secondary: #0f1420;
+            --bg-card: #141929;
+            --bg-card-hover: #1a2035;
+            --bg-glass: rgba(255,255,255,0.04);
+            --border-subtle: rgba(255,255,255,0.07);
+            --border-active: rgba(99,102,241,0.5);
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --accent-glow: rgba(99,102,241,0.2);
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --info: #06b6d4;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #475569;
+            --domain-os: #8b5cf6;
+            --domain-dbms: #06b6d4;
+            --domain-arch: #f59e0b;
+            --domain-la: #10b981;
+            --domain-ai: #f472b6;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
+            --shadow-glow: 0 0 40px rgba(99,102,241,0.15);
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            background-image: radial-gradient(ellipse at 20% 20%, rgba(99,102,241,0.06) 0%, transparent 60%),
+                              radial-gradient(ellipse at 80% 80%, rgba(6,182,212,0.04) 0%, transparent 60%);
+        }
+
+        /* ─── NAVBAR ─── */
+        .navbar {
+            background: rgba(10,13,20,0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 0 32px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .navbar-brand .logo-icon {
+            width: 32px; height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--info));
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+        .nav-badge {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            background: var(--accent-glow);
+            border: 1px solid var(--border-active);
+            color: var(--accent-light);
+            font-weight: 500;
+        }
+        .nav-status-dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--success);
+            box-shadow: 0 0 6px var(--success);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+        /* ─── HERO / SEARCH ─── */
+        .search-hero {
+            padding: 48px 32px 36px;
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .hero-title {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            background: linear-gradient(135deg, #f1f5f9 30%, var(--accent-light) 70%, var(--info) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        .hero-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+        .search-bar-wrapper {
+            position: relative;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        #searchInput {
+            width: 100%;
+            padding: 16px 130px 16px 52px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+            outline: none;
+        }
+        #searchInput::placeholder { color: var(--text-muted); }
+        #searchInput:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-glow), var(--shadow-glow);
+            background: var(--bg-card-hover);
+        }
+        #searchBtn {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, var(--accent), #4f46e5);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            padding: 9px 22px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        #searchBtn:hover { transform: translateY(-50%) scale(1.04); box-shadow: 0 0 20px var(--accent-glow); }
+        #searchBtn:disabled { opacity: 0.5; cursor: not-allowed; transform: translateY(-50%); }
+
+        /* ─── FILTER PILLS ─── */
+        .filter-area {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 32px 8px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .filter-pill {
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border-subtle);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Inter', sans-serif;
+        }
+        .filter-pill:hover { border-color: var(--accent); color: var(--accent-light); background: var(--accent-glow); }
+        .filter-pill.active { background: var(--accent); border-color: var(--accent); color: white; box-shadow: 0 0 16px var(--accent-glow); }
+        .filter-dot { width: 7px; height: 7px; border-radius: 50%; }
+
+        /* ─── STAGE BAR ─── */
+        .stage-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 32px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            max-width: 860px;
+            margin: 0 auto 8px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .stage-chip {
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+        }
+        .stage-chip.active { border-color: var(--accent); color: var(--accent-light); background: var(--accent-glow); }
+        .stage-arrow { color: var(--text-muted); font-size: 0.7rem; }
+
+        /* ─── LAYOUT ─── */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 20px;
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 0 24px 40px;
+        }
+        @media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
+
+        /* ─── RESULTS ─── */
+        #loading {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 80px;
+            color: var(--text-secondary);
+        }
+        .spinner-ring {
+            width: 44px; height: 44px;
+            border: 3px solid var(--border-subtle);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 80px 40px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+        .empty-state i { font-size: 2.5rem; color: var(--accent); opacity: 0.4; }
+        .empty-state h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-secondary); }
+        .empty-state p { font-size: 0.85rem; }
+
+        /* ─── RESULT CARD ─── */
+        .result-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 20px 22px;
+            margin-bottom: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .result-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 3px; height: 100%;
+            background: var(--accent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .result-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-active);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-card), var(--shadow-glow);
+        }
+        .result-card:hover::before { opacity: 1; }
+
+        .card-header-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .card-rank {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            padding: 3px 8px;
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            background: var(--bg-glass);
+            white-space: nowrap;
+            margin-top: 3px;
+        }
+        .card-title-area { flex: 1; }
+        .card-title {
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        .card-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        /* Domain badges */
+        .domain-badge {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 3px 9px;
+            border-radius: 6px;
+        }
+        .domain-os { background: rgba(139,92,246,0.15); color: #a78bfa; border: 1px solid rgba(139,92,246,0.3); }
+        .domain-dbms { background: rgba(6,182,212,0.15); color: #22d3ee; border: 1px solid rgba(6,182,212,0.3); }
+        .domain-computer_architecture, .domain-arch { background: rgba(245,158,11,0.15); color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
+        .domain-linear_algebra_cv { background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+        .domain-artificial_intelligence { background: rgba(244,114,182,0.15); color: #f9a8d4; border: 1px solid rgba(244,114,182,0.3); }
+
+        .utility-score {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--warning);
+            padding: 3px 10px;
+            background: rgba(245,158,11,0.1);
+            border: 1px solid rgba(245,158,11,0.25);
+            border-radius: 6px;
+        }
+        .card-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+
+        /* Source doc button */
+        .btn-source {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(99,102,241,0.1);
+            border: 1px solid var(--border-active);
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .btn-source:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            box-shadow: 0 0 12px var(--accent-glow);
+            text-decoration: none;
+        }
+        .btn-source i { font-size: 0.8rem; }
+
+        .btn-feedback {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(16,185,129,0.08);
+            border: 1px solid rgba(16,185,129,0.25);
+            color: #34d399;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-feedback:hover { background: var(--success); color: white; border-color: var(--success); }
+        .btn-feedback.sent { background: var(--success); color: white; border-color: var(--success); }
+
+        .snippet {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        /* Collapsible feature breakdown */
+        .feature-toggle {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 0;
+            background: none;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+        }
+        .feature-toggle:hover { color: var(--accent-light); }
+
+        .feature-grid {
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-subtle);
+        }
+        .feature-grid.open { display: grid; }
+        .feature-item { display: block; }
+        .feature-label-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            font-size: 0.72rem;
+        }
+        .feature-name { color: var(--text-muted); }
+        .feature-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: var(--accent-light);
+        }
+        .feature-bar-track { background: rgba(255,255,255,0.06); border-radius: 4px; height: 4px; overflow: hidden; }
+        .feature-bar-fill { height: 100%; border-radius: 4px; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        /* ─── SIDEBAR ─── */
+        .sidebar { position: sticky; top: 80px; align-self: start; }
+
+        .sidebar-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        .sidebar-card h5 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sidebar-card h5 i { color: var(--accent); }
+        .sidebar-sub { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 16px; }
+        .sidebar-learnt-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 6px;
+            background: rgba(16,185,129,0.1);
+            border: 1px solid rgba(16,185,129,0.3);
+            color: var(--success);
+            margin-left: auto;
+        }
+
+        .weight-item { margin-bottom: 10px; }
+        .weight-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            font-size: 0.75rem;
+        }
+        .weight-name { color: var(--text-secondary); }
+        .weight-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            color: var(--accent-light);
+        }
+        .weight-track { background: rgba(255,255,255,0.06); border-radius: 4px; height: 5px; overflow: hidden; }
+        .weight-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), var(--info)); transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        .optimal-badge {
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(16,185,129,0.3);
+            background: rgba(16,185,129,0.08);
+            color: var(--success);
+            text-align: center;
+            margin-top: 12px;
+            display: none;
+        }
+
+        /* Stage info panel */
+        .stage-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            display: none;
+        }
+        .stage-info-grid.visible { display: grid; }
+        .stage-stat {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            padding: 10px 8px;
+            text-align: center;
+        }
+        .stage-stat-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            line-height: 1;
+        }
+        .stage-stat-label { font-size: 0.65rem; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+        .timing-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.72rem;
+            padding: 4px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+        }
+        .timing-row:last-child { border-bottom: none; }
+        .timing-val { font-family: 'JetBrains Mono', monospace; color: var(--success); }
+
+        /* ─── RESULT COUNT ─── */
+        .results-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .results-count { font-size: 0.82rem; color: var(--text-muted); }
+        .results-count strong { color: var(--text-secondary); }
+
+        /* ─── TOAST ─── */
+        .toast-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .toast-item {
+            background: var(--bg-card-hover);
+            border: 1px solid var(--border-active);
+            border-radius: var(--radius-md);
+            padding: 12px 16px;
+            font-size: 0.82rem;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-card);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: toastIn 0.3s ease;
+            min-width: 260px;
+        }
+        .toast-item i { color: var(--success); font-size: 1rem; }
+        @keyframes toastIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ─── ERROR ─── */
+        .error-card {
+            background: rgba(239,68,68,0.05);
+            border: 1px solid rgba(239,68,68,0.2);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            color: #fca5a5;
+            font-size: 0.85rem;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        /* ─── INLINE DOCUMENT VIEWER ─── */
+        .btn-view-doc {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 13px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(6,182,212,0.08);
+            border: 1px solid rgba(6,182,212,0.3);
+            color: #22d3ee;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+            white-space: nowrap;
+        }
+        .btn-view-doc:hover {
+            background: #06b6d4;
+            color: white;
+            border-color: #06b6d4;
+            box-shadow: 0 0 12px rgba(6,182,212,0.3);
+        }
+        .btn-view-doc.active {
+            background: #06b6d4;
+            color: white;
+            border-color: #06b6d4;
+        }
+        .btn-view-doc i { font-size: 0.8rem; }
+
+        /* The viewer panel that slides in BELOW the result card */
+        .doc-viewer-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+            margin-top: 0;
+        }
+        .doc-viewer-panel.open {
+            max-height: 700px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+        .doc-viewer-inner {
+            background: #0d1117;
+            border: 1px solid var(--border-active);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .doc-viewer-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            background: rgba(99,102,241,0.08);
+            border-bottom: 1px solid var(--border-active);
+            font-size: 0.78rem;
+        }
+        .doc-viewer-filename {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-light);
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .doc-viewer-bar a {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.72rem;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition);
+        }
+        .doc-viewer-bar a:hover { color: white; border-color: var(--accent); background: var(--accent-glow); }
+        .doc-viewer-bar .close-viewer {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            line-height: 1;
+            transition: var(--transition);
+        }
+        .doc-viewer-bar .close-viewer:hover { color: var(--danger); background: rgba(239,68,68,0.1); }
+        .doc-viewer-iframe {
+            width: 100%;
+            height: 580px;
+            border: none;
+            display: block;
+            background: #fff;
+        }
+        .doc-viewer-pptx {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            height: 200px;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            padding: 24px;
+            text-align: center;
+        }
+        .doc-viewer-pptx i { font-size: 2rem; color: #f59e0b; opacity: 0.7; }
+        .doc-viewer-pptx a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 10px;
+            background: rgba(245,158,11,0.1);
+            border: 1px solid rgba(245,158,11,0.3);
+            color: #fcd34d;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.82rem;
+            transition: var(--transition);
+        }
+        .doc-viewer-pptx a:hover { background: #f59e0b; color: #000; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="/" class="navbar-brand">
+            <div class="logo-icon"><i class="bi bi-cpu-fill" style="color:white;"></i></div>
+            AI Utility Agent
+        </a>
+        <div style="display:flex;align-items:center;gap:12px;">
+            <span class="nav-badge">3-Stage Pipeline</span>
+            <div class="nav-status-dot" title="System Online"></div>
+        </div>
+    </nav>
+
+    <!-- HERO SEARCH -->
+    <div class="search-hero">
+        <h1 class="hero-title">Utility Agent</h1>
+        <p class="hero-subtitle">BM25 + Sentence-BERT · Cross-Encoder Reranking · Bayesian Utility Agent</p>
+        <div class="search-bar-wrapper">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Search across OS, DBMS, STS, Architecture...">
+            <button id="searchBtn" onclick="performSearch()">
+                <i class="bi bi-arrow-right-circle-fill"></i> Search
+            </button>
+        </div>
+    </div>
+
+    <!-- FILTER PILLS -->
+    <div class="filter-area">
+        <button class="filter-pill active" onclick="setFilter('All', this)">
+            <i class="bi bi-grid-fill" style="font-size:0.65rem;"></i> All Domains
+        </button>
+        <button class="filter-pill" onclick="setFilter('operating_systems', this)">
+            <span class="filter-dot" style="background:#8b5cf6;"></span> Operating Systems
+        </button>
+        <button class="filter-pill" onclick="setFilter('dbms', this)">
+            <span class="filter-dot" style="background:#06b6d4;"></span> DBMS
+        </button>
+        <button class="filter-pill" onclick="setFilter('computer_architecture', this)">
+            <span class="filter-dot" style="background:#f59e0b;"></span> Architecture
+        </button>
+        <button class="filter-pill" onclick="setFilter('soft_skills', this)">
+            <span class="filter-dot" style="background:#10b981;"></span> STS
+        </button>
+    </div>
+
+    <!-- PIPELINE STAGE BAR -->
+    <div class="stage-bar" id="stageBar" style="display:none;">
+        <span class="stage-chip active" id="stage-hybrid">Hybrid 0</span>
+        <span class="stage-arrow">›</span>
+        <span class="stage-chip active" id="stage-rerank">Reranked 0</span>
+        <span class="stage-arrow">›</span>
+        <span class="stage-chip active" id="stage-final">Final 0</span>
+        <span style="margin-left:8px;color:var(--text-muted);">·</span>
+        <span id="stage-timing" style="color:var(--text-muted);"></span>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="main-layout">
+
+        <!-- RESULTS COLUMN -->
+        <div class="results-col">
+            <!-- Loading -->
+            <div id="loading" style="display:none; flex-direction:column; align-items:center; gap:16px; padding:80px; color:var(--text-secondary);">
+                <div class="spinner-ring"></div>
+                <p style="font-size:0.85rem;">Running 3-stage pipeline...</p>
+            </div>
+
+            <!-- Empty state -->
+            <div id="emptyState" class="empty-state">
+                <i class="bi bi-search"></i>
+                <h3>Start your search</h3>
+                <p>Query academic documents across 5 domains with Bayesian utility ranking.</p>
+            </div>
+
+            <!-- Results header -->
+            <div class="results-header" id="resultsHeader" style="display:none;">
+                <span class="results-count" id="resultsCount"></span>
+                <span style="font-size:0.75rem; color:var(--text-muted);" id="filterLabel"></span>
+            </div>
+
+            <!-- Results area -->
+            <div id="resultsArea"></div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <!-- Pipeline Stats -->
+            <div class="sidebar-card">
+                <h5><i class="bi bi-activity"></i> Pipeline Stats</h5>
+                <p class="sidebar-sub">Stage throughput from last query</p>
+                <div class="stage-info-grid" id="stageInfoGrid">
+                    <div class="stage-stat">
+                        <div class="stage-stat-num" id="stat-hybrid">—</div>
+                        <div class="stage-stat-label">Hybrid</div>
+                    </div>
+                    <div class="stage-stat">
+                        <div class="stage-stat-num" id="stat-rerank">—</div>
+                        <div class="stage-stat-label">Reranked</div>
+                    </div>
+                    <div class="stage-stat">
+                        <div class="stage-stat-num" id="stat-final">—</div>
+                        <div class="stage-stat-label">Final</div>
+                    </div>
+                </div>
+                <div id="timingRows" style="margin-top:10px;"></div>
+            </div>
+
+            <!-- Weights Panel -->
+            <div class="sidebar-card">
+                <h5>
+                    <i class="bi bi-sliders"></i> Utility Weights
+                    <span class="sidebar-learnt-badge" id="queriesLearned">0 updates</span>
+                </h5>
+                <p class="sidebar-sub">Live Bayesian weights from your click feedback</p>
+                <div id="weightsBars"></div>
+                <div class="optimal-badge" id="optimalBadge">
+                    <i class="bi bi-stars"></i> Optimal weights reached!
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- DOCUMENT VIEWER MODAL (full-page overlay fallback for mobile) -->
+    <div id="docModal" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.88);backdrop-filter:blur(8px);flex-direction:column;">
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 20px;background:var(--bg-card);border-bottom:1px solid var(--border-subtle);">
+            <i class="bi bi-file-earmark-text" style="color:var(--accent);"></i>
+            <span id="modalFilename" style="font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--accent-light);flex:1;"></span>
+            <a id="modalOpenLink" href="#" target="_blank" style="font-size:0.75rem;color:var(--text-muted);padding:4px 10px;border:1px solid var(--border-subtle);border-radius:6px;text-decoration:none;display:inline-flex;align-items:center;gap:5px;"><i class="bi bi-box-arrow-up-right"></i> Open in tab</a>
+            <button onclick="closeModal()" style="background:none;border:none;color:var(--text-muted);font-size:1.4rem;cursor:pointer;padding:0 6px;line-height:1;">×</button>
+        </div>
+        <iframe id="modalIframe" src="" style="flex:1;border:none;background:#fff;"></iframe>
+    </div>
+
+    <script>
+        // ─── GLOBALS ───
+        let userId = localStorage.getItem('uid');
+        if (!userId) { userId = crypto.randomUUID(); localStorage.setItem('uid', userId); }
+
+        let currentFilter = 'All';
+        let latestResults = [];
+        let lastTimings = {};
+        let lastCounts = {};
+
+        const FEATURE_NAMES = ["Cross Encoder","BERT Similarity","BM25 Score","Diversity","Recency","Source Trust","Length Match","Readability"];
+        const FEATURE_COLORS = ["#6366f1","#06b6d4","#f59e0b","#10b981","#8b5cf6","#f472b6","#ef4444","#22d3ee"];
+
+        const DOMAIN_LABELS = {
+            operating_systems: 'Operating Systems',
+            dbms: 'DBMS',
+            computer_architecture: 'Architecture',
+            soft_skills: 'STS'
+        };
+        const DOMAIN_CLASSES = {
+            operating_systems: 'domain-os',
+            dbms: 'domain-dbms',
+            computer_architecture: 'domain-computer_architecture',
+            soft_skills: 'domain-linear_algebra_cv'
+        };
+
+        // ─── INITIALISE ───
+        fetchWeights();
+        document.getElementById('searchInput').addEventListener('keypress', e => { if (e.key === 'Enter') performSearch(); });
+
+        // ─── FETCH WEIGHTS ───
+        async function fetchWeights() {
+            try {
+                const r = await fetch(`/api/weights/${userId}`);
+                const d = await r.json();
+                renderWeights(d.weights, d.queries_learned);
+            } catch(_) {}
+        }
+
+        function renderWeights(weights, queries) {
+            document.getElementById('queriesLearned').textContent = `${queries} updates`;
+            if (queries >= 10) document.getElementById('optimalBadge').style.display = 'block';
+
+            const container = document.getElementById('weightsBars');
+            container.innerHTML = '';
+            FEATURE_NAMES.forEach((name, i) => {
+                const w = weights[i];
+                const pct = (w * 100).toFixed(1);
+                container.innerHTML += `
+                <div class="weight-item">
+                    <div class="weight-row">
+                        <span class="weight-name">${name}</span>
+                        <span class="weight-val">${w.toFixed(3)}</span>
+                    </div>
+                    <div class="weight-track">
+                        <div class="weight-fill" style="width:${pct}%"></div>
+                    </div>
+                </div>`;
+            });
+        }
+
+        // ─── FILTERS ───
+        function setFilter(domain, btn) {
+            document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = domain;
+            renderResults();
+        }
+
+        // ─── SEARCH ───
+        async function performSearch() {
+            const query = document.getElementById('searchInput').value.trim();
+            if (!query) return;
+
+            document.getElementById('emptyState').style.display = 'none';
+            document.getElementById('resultsHeader').style.display = 'none';
+            document.getElementById('resultsArea').innerHTML = '';
+            document.getElementById('loading').style.display = 'flex';
+            document.getElementById('searchBtn').disabled = true;
+            document.getElementById('stageBar').style.display = 'none';
+
+            try {
+                const r = await fetch('/api/search', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query, user_id: userId })
+                });
+                const data = await r.json();
+                if (data.error) throw new Error(data.error);
+
+                latestResults = data.results;
+                lastTimings = data.timings;
+                lastCounts = data.stage_counts;
+
+                // Update sidebar stats
+                document.getElementById('stat-hybrid').textContent = data.stage_counts.hybrid;
+                document.getElementById('stat-rerank').textContent = data.stage_counts.reranked;
+                document.getElementById('stat-final').textContent = data.stage_counts.final;
+                document.getElementById('stageInfoGrid').classList.add('visible');
+
+                document.getElementById('timingRows').innerHTML = `
+                    <div class="timing-row"><span>Hybrid retrieval</span><span class="timing-val">${data.timings.hybrid}s</span></div>
+                    <div class="timing-row"><span>Cross-encoder</span><span class="timing-val">${data.timings.rerank}s</span></div>
+                    <div class="timing-row"><span>Utility agent</span><span class="timing-val">${data.timings.utility}s</span></div>`;
+
+                // Update stage bar
+                document.getElementById('stage-hybrid').textContent = `Hybrid ${data.stage_counts.hybrid}`;
+                document.getElementById('stage-rerank').textContent = `Reranked ${data.stage_counts.reranked}`;
+                document.getElementById('stage-final').textContent = `Final ${data.stage_counts.final}`;
+                document.getElementById('stageBar').style.display = 'flex';
+
+                renderWeights(data.weights_used, parseInt(document.getElementById('queriesLearned').textContent));
+                renderResults();
+            } catch(e) {
+                document.getElementById('resultsArea').innerHTML = `
+                    <div class="error-card"><i class="bi bi-exclamation-triangle-fill"></i> ${e.message}</div>`;
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('searchBtn').disabled = false;
+            }
+        }
+
+        // ─── RENDER RESULTS ───
+        function renderResults() {
+            const container = document.getElementById('resultsArea');
+            container.innerHTML = '';
+
+            const filtered = currentFilter === 'All'
+                ? latestResults
+                : latestResults.filter(r => r.domain === currentFilter);
+
+            const header = document.getElementById('resultsHeader');
+            const countEl = document.getElementById('resultsCount');
+
+            if (latestResults.length === 0) {
+                document.getElementById('emptyState').style.display = 'flex';
+                header.style.display = 'none';
+                return;
+            }
+
+            header.style.display = 'flex';
+            countEl.innerHTML = filtered.length > 0
+                ? `Showing <strong>${filtered.length}</strong> of <strong>${latestResults.length}</strong> results`
+                : `<strong>0</strong> results for current filter`;
+            document.getElementById('filterLabel').textContent = currentFilter !== 'All' ? DOMAIN_LABELS[currentFilter] || currentFilter : '';
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="empty-state" style="padding:40px;"><i class="bi bi-funnel"></i><h3>No results</h3><p>Try a different domain filter.</p></div>`;
+                return;
+            }
+
+            filtered.forEach((r, idx) => {
+                const card = buildCard(r, idx);
+                container.appendChild(card);
+                // Animate in
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(12px)';
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, idx * 50);
+            });
+        }
+
+        function buildCard(r, idx) {
+            const f = r.features;
+            const featArr = [f.cross_encoder, f.bert_similarity, f.bm25_score, f.diversity, f.recency, f.source_trust, f.length_match, f.readability];
+
+            const wrapper = document.createElement('div');
+
+            const card = document.createElement('div');
+            card.className = 'result-card';
+            card.dataset.docId = r.id;
+
+            const domainClass = DOMAIN_CLASSES[r.domain] || 'domain-os';
+            const safeId = r.id.replace(/[^a-zA-Z0-9_]/g, '_');
+
+            // Determine file type
+            let viewDocBtn = '';
+            let viewerPanelHtml = '';
+            if (r.has_source && r.source_file) {
+                const encodedFile = encodeURIComponent(r.source_file);
+                const ext = r.source_file.split('.').pop().toUpperCase();
+                const isPdf = ext === 'PDF';
+                const docUrl = `/api/document/${encodedFile}`;
+                const shortName = r.source_file.length > 28 ? r.source_file.substring(0,26) + '…' : r.source_file;
+
+                viewDocBtn = `
+                    <button class="btn-view-doc" id="viewbtn_${safeId}"
+                        onclick="toggleDocViewer(event, '${safeId}', '${docUrl}', '${r.source_file}', ${isPdf})">
+                        <i class="bi bi-${isPdf ? 'file-earmark-pdf' : 'file-earmark-slides'}"></i>
+                        View ${ext}
+                    </button>`;
+
+                // Build the viewer panel HTML
+                const viewerContent = isPdf
+                    ? `<iframe class="doc-viewer-iframe" src="" id="iframe_${safeId}"
+                           title="${r.source_file}" loading="lazy"></iframe>`
+                    : `<div class="doc-viewer-pptx">
+                           <i class="bi bi-file-earmark-slides"></i>
+                           <p>PowerPoint files cannot be previewed directly in the browser.</p>
+                           <a href="${docUrl}" download="${r.source_file}">
+                               <i class="bi bi-download"></i> Download ${r.source_file}
+                           </a>
+                       </div>`;
+
+                viewerPanelHtml = `
+                    <div class="doc-viewer-panel" id="viewer_${safeId}">
+                        <div class="doc-viewer-inner">
+                            <div class="doc-viewer-bar">
+                                <i class="bi bi-file-earmark-text" style="color:var(--accent);"></i>
+                                <span class="doc-viewer-filename">${shortName}</span>
+                                <a href="${docUrl}" target="_blank" onclick="event.stopPropagation()">
+                                    <i class="bi bi-box-arrow-up-right"></i> Open in tab
+                                </a>
+                                ${isPdf ? `<a href="${docUrl}" download="${r.source_file}" onclick="event.stopPropagation()">
+                                    <i class="bi bi-download"></i> Download
+                                </a>` : ''}
+                                <button class="close-viewer" onclick="closeDocViewer(event, '${safeId}')" title="Close viewer">
+                                    <i class="bi bi-x-lg"></i>
+                                </button>
+                            </div>
+                            ${viewerContent}
+                        </div>
+                    </div>`;
+            }
+
+            // Feature bars HTML
+            let featureBarsHtml = '';
+            FEATURE_NAMES.forEach((name, i) => {
+                const val = featArr[i];
+                const pct = (val * 100).toFixed(1);
+                featureBarsHtml += `
+                    <div class="feature-item">
+                        <div class="feature-label-row">
+                            <span class="feature-name">${name}</span>
+                            <span class="feature-val">${val.toFixed(3)}</span>
+                        </div>
+                        <div class="feature-bar-track">
+                            <div class="feature-bar-fill" style="width:${pct}%; background:${FEATURE_COLORS[i]};"></div>
+                        </div>
+                    </div>`;
+            });
+
+            card.innerHTML = `
+                <div class="card-header-row">
+                    <span class="card-rank">#${idx + 1}</span>
+                    <div class="card-title-area">
+                        <div class="card-title">${r.title}</div>
+                        <div class="card-meta">
+                            <span class="domain-badge ${domainClass}">${DOMAIN_LABELS[r.domain] || r.domain}</span>
+                            <span class="utility-score">&#x26A1; ${r.utility.toFixed(4)}</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        ${viewDocBtn}
+                        <button class="btn-feedback" id="fb_${safeId}"
+                            onclick="sendFeedback(event, '${r.id}', [${featArr.join(',')}])">
+                            <i class="bi bi-hand-thumbs-up"></i> Helpful
+                        </button>
+                    </div>
+                </div>
+                <p class="snippet">${r.content}</p>
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                    <button class="feature-toggle" onclick="toggleFeatures(event, '${safeId}')">
+                        <i class="bi bi-chevron-right" id="chevron_${safeId}" style="transition:transform 0.2s;"></i>
+                        Show feature breakdown
+                    </button>
+                </div>
+                <div class="feature-grid" id="feats_${safeId}">
+                    ${featureBarsHtml}
+                </div>
+            `;
+
+            wrapper.appendChild(card);
+
+            // Append viewer panel OUTSIDE the card (sibling), so it spans full width below
+            if (viewerPanelHtml) {
+                const viewerEl = document.createElement('div');
+                viewerEl.innerHTML = viewerPanelHtml;
+                wrapper.appendChild(viewerEl.firstElementChild);
+            }
+
+            return wrapper;
+        }
+
+        function toggleFeatures(e, id) {
+            e.stopPropagation();
+            const grid = document.getElementById(`feats_${id}`);
+            const chevron = document.getElementById(`chevron_${id}`);
+            const isOpen = grid.classList.toggle('open');
+            chevron.style.transform = isOpen ? 'rotate(90deg)' : '';
+        }
+
+        // ─── INLINE DOC VIEWER ───
+        function toggleDocViewer(e, safeId, docUrl, filename, isPdf) {
+            e.stopPropagation();
+            const panel = document.getElementById(`viewer_${safeId}`);
+            const btn   = document.getElementById(`viewbtn_${safeId}`);
+            if (!panel) return;
+
+            const isOpen = panel.classList.toggle('open');
+            btn.classList.toggle('active', isOpen);
+
+            if (isOpen && isPdf) {
+                // Lazy-load: only set src when opening
+                const iframe = document.getElementById(`iframe_${safeId}`);
+                if (iframe && !iframe.src) {
+                    iframe.src = docUrl;
+                }
+            }
+
+            // Smooth scroll the viewer into view
+            if (isOpen) {
+                setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+            }
+        }
+
+        function closeDocViewer(e, safeId) {
+            e.stopPropagation();
+            const panel = document.getElementById(`viewer_${safeId}`);
+            const btn   = document.getElementById(`viewbtn_${safeId}`);
+            if (panel) panel.classList.remove('open');
+            if (btn)   btn.classList.remove('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('docModal');
+            modal.style.display = 'none';
+            document.getElementById('modalIframe').src = '';
+        }
+
+        // ─── FEEDBACK ───
+        async function sendFeedback(e, docId, featuresArr) {
+            e.stopPropagation();
+            const btn = document.getElementById(`fb_${docId}`);
+            if (btn.classList.contains('sent')) return;
+
+            btn.classList.add('sent');
+            btn.innerHTML = '<i class="bi bi-check-lg"></i> Noted!';
+
+            try {
+                const query = document.getElementById('searchInput').value.trim();
+                const r = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        query,
+                        doc_id: docId,
+                        user_id: userId,
+                        clicked: true,
+                        features: featuresArr
+                    })
+                });
+                const data = await r.json();
+                renderWeights(data.updated_weights, data.queries_learned);
+                showToast('Bayesian weights updated from your feedback!');
+            } catch(err) {
+                console.error('Feedback error', err);
+            }
+        }
+
+        // ─── TOAST ───
+        function showToast(msg) {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = 'toast-item';
+            toast.innerHTML = `<i class="bi bi-check-circle-fill"></i> ${msg}`;
+            container.appendChild(toast);
+            setTimeout(() => { toast.style.transition = 'opacity 0.4s'; toast.style.opacity = '0'; setTimeout(() => toast.remove(), 400); }, 3000);
+        }
+    </script>
+</body>
+</html>
